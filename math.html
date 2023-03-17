@@ -19,7 +19,23 @@
         align-items:end;
         border: 2px inset grey;
     }
-   
+    main{
+        margin: 20px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5px;
+        padding-bottom: 40px;
+        border: 1px solid grey;
+    }
+    input {
+        margin: 10px auto;
+        border: 1px solid grey;
+        font-size: 30px;
+        text-align: center;
+    }
     </style>
 </head>
 <body>
@@ -29,8 +45,51 @@
         <img src="images/math3.jpg" style="width: 70%;"> 
         
     </header>
-    
-    
+    <main>
+        <h4 style="text-align: center;">РЕШЕТЕ ЗАДАЧИТЕ И ЗАПИШЕТЕ БУКВИТЕ НА ВЕРНИТЕ ОТГОВОРИ</h4>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">              
+              <div class="card">
+                <img src="images/m2.jpg" class="card-img-top" alt="...">
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="images/m1.jpg" class="card-img-top" alt="...">
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="images/m3.jpg" class="card-img-top" alt="...">
+                
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="images/m4.jpg" class="card-img-top" alt="...">
+                
+              </div>
+            </div>
+          </div>
+        
+    </main>
+    <footer>
+        <h5 style="text-align: center; margin-top: 15px;">ЗА ДА ОТКЛЮЧИТЕ СТЯТА, ПОЗНАЙТЕ ДУМАТА, КОЯТО СЕ ОБРАЗУВА ОТ ПОЛУЧЕНИЯ БУКВЕН КОД И Я ВЪВЕДЕТЕ В ПОЛЕТО. </h5>
+        <input id="textID" type="text"  >
+        <input type="button" class="btn btn-secondary btn-lg" value="Escape the room" onclick="check()">
+    </footer>
+    <script>
+        const code=document.getElementById('textID')
+        function check(){
+            if(code.value==='логика'||code.value==='ЛОГИКА' ){
+            alert('ВИЕ УСПЯХТЕ ДА ИЗЛЕЗЕТЕ ОТ СТАЯТА');
+            code.value=""
+            window.open('on.html','_self');
+            }else{
+            alert('ГРЕШЕН КОД');
+            }
+        }
+    </script>
     
    
 </body>
