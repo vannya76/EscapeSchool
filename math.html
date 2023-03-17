@@ -46,16 +46,16 @@
         
     </header>
     <main>
-        <h4 style="text-align: center;">РЕШЕТЕ ЗАДАЧИТЕ И ЗАПИШЕТЕ БУКВИТЕ НА ВЕРНИТЕ ОТГОВОРИ</h4>
+        <h4 style="text-align: center;">РЕШЕТЕ ЗАДАЧИТЕ И ЗАПИШЕТЕ НОМЕРАТА НА ВЕРНИТЕ ОТГОВОРИ</h4>
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">              
               <div class="card">
-                <img src="images/m2.jpg" class="card-img-top" alt="...">
+                <img src="images/m1.jpg" class="card-img-top" alt="...">
               </div>
             </div>
             <div class="col">
               <div class="card">
-                <img src="images/m1.jpg" class="card-img-top" alt="...">
+                <img src="images/m2.jpg" class="card-img-top" alt="...">
               </div>
             </div>
             <div class="col">
@@ -66,7 +66,7 @@
             </div>
             <div class="col">
               <div class="card">
-                <img src="images/m4.JPG" class="card-img-top" alt="...">
+                <img src="images/m4.jpg" class="card-img-top" alt="...">
                 
               </div>
             </div>
@@ -74,15 +74,15 @@
         
     </main>
     <footer>
-        <h5 style="text-align: center; margin-top: 15px;">ЗА ДА ОТКЛЮЧИТЕ СТЯТА, ПОЗНАЙТЕ ДУМАТА, КОЯТО СЕ ОБРАЗУВА ОТ ПОЛУЧЕНИЯ БУКВЕН КОД И Я ВЪВЕДЕТЕ В ПОЛЕТО. </h5>
+        <h5 style="text-align: center; margin-top: 15px;">ЗА ДА ОТКЛЮЧИТЕ СТЯТА, ВЪВЕДЕТЕ ПОСЛЕДОВАТЕЛНО НОМЕРАТА НА ВЕРНИТЕ ОТГОВОРИИ </h5>
         <input id="textID" type="text"  >
         <input type="button" class="btn btn-secondary btn-lg" value="Escape the room" onclick="check()">
     </footer>
     <script>
         const code=document.getElementById('textID')
         function check(){
-            if(code.value==='логика'||code.value==='ЛОГИКА' ){
-            alert('ВИЕ УСПЯХТЕ ДА ИЗЛЕЗЕТЕ ОТ СТАЯТА');
+            if(code.value==='314159'||code.value==='3,14159' ){
+            alert('ВИЕ УСПЯХТЕ ДА ИЗЛЕЗЕТЕ ОТ СТАЯТА БЛАГОДАРЕНИЕ НА ВАШИТЕ ЗНАНИЯ И НА ПЪРВИТЕ 6 ЦИФРИ ОТ ЧИСЛОТО ПИ 3,14159');
             code.value=""
             window.open('on.html','_self');
             }else{
