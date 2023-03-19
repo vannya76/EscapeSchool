@@ -28,7 +28,8 @@
             border: 1px solid gray;
             border-radius: 20px;
             background-color:#3492DB;
-            padding: 5px;
+            padding: 10px;
+            cursor: pointer;
         }
         .questmark{
             padding: 0px; 
@@ -38,6 +39,52 @@
         main{
             margin-top: -20px;
         }
+        section{
+            width: 90%;
+            height:150px;
+            margin:30px auto;
+            border: 1px solid grey;
+        }
+        p {
+            /*display: none;*/
+            visibility: hidden;  
+           
+        }
+        .words{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin:40px 0px;  
+        }
+    .slide-in-fwd-center {
+	-webkit-animation: slide-in-fwd-center 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s infinite alternate-reverse both;
+	        animation: slide-in-fwd-center 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s infinite alternate-reverse both;
+}
+ @-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
         </style>
 </head>
 <body>
@@ -47,21 +94,21 @@
                 <img src="images/math.jpg" style="height:100%;" >
                 <div class="card-img-overlay" >
                   <a > <img class= "questmark" src="images/lock1.gif"  >  </a>
-                    <h1 >ESCAPED</h1> 
+                 <a href="#words1" style="text-decoration: none;"> <h1  onclick="show(this, document.getElementsByClassName('--paragraph')[0])">ESCAPED</h1></a>  
                 </div>            
             </div>
             <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
                 <img src="images/lit2.jpg" style="height:100%;">
                 <div class="card-img-overlay">
                     <a ><img class= "questmark" src="images/lock1.gif"  > </a> 
-                    <h1 >ESCAPED</h1>  
+                    <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[1])">ESCAPED</h1> </a> 
                 </div>            
             </div>       
             <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
                 <img src="images/pn3.jpg" style="height:100%;">
                 <div class="card-img-overlay">
                     <a ><img class= "questmark" src="images/lock1.gif"  > </a> 
-                    <h1 >ESCAPED</h1>  
+                    <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[2])">ESCAPED</h1>  </a>
                 </div>            
             </div>           
         </div>
@@ -70,26 +117,45 @@
             <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
                 <img src="images/abc.jpg" style="height:100%;">
                 <div class="card-img-overlay">
-                    <a ><img class= "questmark" src="images/lock1.gif"  >  </a>
-                    <h1 >ESCAPED</h1>  
+                    <a ><img class= "questmark" src="images/lock1.gif" > </a> 
+                    <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[3])">ESCAPED</h1>  </a>
                 </div>            
             </div>
             <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
                 <img src="images/bul2.jpg" style="height:99%">
                 <div class="card-img-overlay" >
                     <a ><img class= "questmark" src="images/lock1.gif" > </a> 
-                    <h1 >ESCAPED</h1> 
+                    <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[4])">ESCAPED</h1> </a>
                 </div>            
             </div>       
             <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
                 <img src="images/elektr3.png" style="height:100%;">
                 <div class="card-img-overlay">
                     <a ><img class= "questmark" src="images/lock1.gif"  >  </a>
-                    <h1 >ESCAPED</h1>  
+                    <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[5])">ESCAPED</h1>  </a>
                 </div>            
             </div>           
         </div>
     </main>    
-           
+    <section class="shadow-lg" id="words1">
+        <div  class='words'>
+        <p  class='btn btn-lg btn-primary slide-in-fwd-center  --paragraph'>Параграф</p>
+        <p  class='btn btn-lg btn-primary slide-in-fwd-center  --paragraph'>Параграф</p>
+        <p  class='btn btn-lg btn-primary slide-in-fwd-center --paragraph'>Параграф</p>
+        <p  class='btn btn-lg btn-primary slide-in-fwd-center --paragraph'>Параграф</p>
+        <p  class='btn btn-lg btn-primary slide-in-fwd-center --paragraph'>Параграф</p>
+        <p  class='btn btn-lg btn-primary slide-in-fwd-center --paragraph'>Параграф</p>
+        </div>
+    </section>   
+    <script>
+        const show = function (_button, _which) {
+            if (_which.style='visibility:hidden') {  
+                _which.style='visibility: visible'      
+            }
+            else {
+                _which.style.display = 'block'              
+            }
+        }
+    </script> 
 </body>
 </html>
