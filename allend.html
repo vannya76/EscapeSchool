@@ -84,29 +84,67 @@
     opacity: 1;
   }
 }
+header{
+    background-color:whitesmoke;
+    text-align: center;
+    color:midnightblue;
+    border: 1px solid grey;
+}
+footer{
+    background-color:whitesmoke;
+    text-align: center;
+    color:midnightblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5px;
+        padding-bottom: 40px;
+        border: 1px solid grey;
+    }
+    input {
+        margin: 10px auto;
+        border: 1px solid grey;
+        font-size: 30px;
+        text-align: center;
+        color:rgba(31, 30, 30, 0.977);
+    }
+    textarea{
+        width: 90%;
+        margin: 10px auto;
+        border: 1px solid grey;
+        font-size: 30px;
+        text-align: center;
+        color:rgba(31, 30, 30, 0.977);
+    }
+    
+      
+    
 
         </style>
 </head>
 <body>
+    <header class="shadow">
+    <h4 style="padding: 20px;">БРАВО! УСПЕШНО ПРЕМИНАХТЕ ПРЕЗ ВСИЧКИ ЗАКЛЮЧЕНИ СТАИ И СТЕ НА СТЪПКА ОТ КРАЯ НА ПРИКЛЮЧЕНИЕТО. ЗА ЦЕЛТА КЛИКНЕТЕ НА ДУМИТЕ ПОКАЗАНИ ПОД ВСЯКА СТАЯ.</h4>
+    </header>
     <main>
-        <div class="m-0 -fldex  justify-content-center row">
+        <div class="m-0 -fldex  justify-content-center row " >
             <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
                 <img src="images/math.jpg" style="height:100%;" >
-                <div class="card-img-overlay" >
+                <div class="card-img-overlay shadow-lg" >
                   <a > <img class= "questmark" src="images/lock1.gif"  >  </a>
                  <a href="#words1" style="text-decoration: none;"> <h1  onclick="show(this, document.getElementsByClassName('--paragraph')[0])">ESCAPED</h1></a>  
                 </div>            
             </div>
             <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
                 <img src="images/lit2.jpg" style="height:100%;">
-                <div class="card-img-overlay">
+                <div class="card-img-overlay shadow-lg">
                     <a ><img class= "questmark" src="images/lock1.gif"  > </a> 
                     <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[1])">ESCAPED</h1> </a> 
                 </div>            
             </div>       
             <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
                 <img src="images/pn3.jpg" style="height:100%;">
-                <div class="card-img-overlay">
+                <div class="card-img-overlay shadow-lg">
                     <a ><img class= "questmark" src="images/lock1.gif"  > </a> 
                     <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[2])">ESCAPED</h1>  </a>
                 </div>            
@@ -116,21 +154,21 @@
         <div class="m-0 -fldex  justify-content-center row">
             <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
                 <img src="images/abc.jpg" style="height:100%;">
-                <div class="card-img-overlay">
+                <div class="card-img-overlay shadow-lg">
                     <a ><img class= "questmark" src="images/lock1.gif" > </a> 
                     <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[3])">ESCAPED</h1>  </a>
                 </div>            
             </div>
             <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
                 <img src="images/bul2.jpg" style="height:99%">
-                <div class="card-img-overlay" >
+                <div class="card-img-overlay shadow-lg" >
                     <a ><img class= "questmark" src="images/lock1.gif" > </a> 
                     <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[4])">ESCAPED</h1> </a>
                 </div>            
             </div>       
             <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
                 <img src="images/elektr3.png" style="height:100%;">
-                <div class="card-img-overlay">
+                <div class="card-img-overlay shadow-lg">
                     <a ><img class= "questmark" src="images/lock1.gif"  >  </a>
                     <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[5])">ESCAPED</h1>  </a>
                 </div>            
@@ -139,14 +177,19 @@
     </main>    
     <section class="shadow-lg" id="words1">
         <div  class='words'>
-        <p  class='btn btn-lg btn-primary slide-in-fwd-center  --paragraph'>Параграф</p>
+        <p  class='btn btn-lg btn-primary slide-in-fwd-center shadow-lg  --paragraph'>Параграф</p>
         <p  class='btn btn-lg btn-primary slide-in-fwd-center  --paragraph'>Параграф</p>
         <p  class='btn btn-lg btn-primary slide-in-fwd-center --paragraph'>Параграф</p>
         <p  class='btn btn-lg btn-primary slide-in-fwd-center --paragraph'>Параграф</p>
         <p  class='btn btn-lg btn-primary slide-in-fwd-center --paragraph'>Параграф</p>
         <p  class='btn btn-lg btn-primary slide-in-fwd-center --paragraph'>Параграф</p>
         </div>
-    </section>   
+    </section>  
+    <footer class="shadow">
+        <h4 style="padding: 20px;">ПОДРЕДЕТЕ ДУМИТЕ ТАКА, ЧЕ ДА ОБРАЗУВАТ ИЗВЕСТНА СЕНТЕНЦИЯ И НЕЙНИЯ АВТОР. ЗАПИШЕТЕ ГИ В ПОЛЕТО:</h4>  
+        <textarea id="textID"  class="shadow-lg"  ></textarea>
+        <input type="button" class="btn btn-secondary btn-lg shadow-lg" value="Escape the School" onclick="check()">
+    </footer> 
     <script>
         const show = function (_button, _which) {
             if (_which.style='visibility:hidden') {  
@@ -154,6 +197,16 @@
             }
             else {
                 _which.style.display = 'block'              
+            }
+        }
+        const code=document.getElementById('textID')
+        function check(){
+            if(code.value==='БАУСТ'||code.value==='Бауст' ){
+            alert('БЛАГОДАРЕНИЕ НА ВАШИТЕ ЗНАНИЯ ВИЕ ПРЕМИНАХТЕ ПРЕЗ ВСИЧКИ ИЗПИТАНИЯ И ПРИКЛЮЧИХТЕ УСПЕШНО КУИЗА. ПОЗДРАВЛЕНИЯ!');
+            code.value=""
+            window.open('index.html','_self');
+            }else{
+            alert('ГРЕШКА. ОПИТАЙТЕ ОТНОВО.');
             }
         }
     </script> 
