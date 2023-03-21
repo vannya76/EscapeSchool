@@ -25,8 +25,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        
-        
+           
     }
     .dvg{
         width: 93%;
@@ -34,14 +33,24 @@
     }
     #it{
         width: 100%;
-        height: 50px;
+        height: 70px;
         background-color:white;
         position:sticky;
         z-index: 1;
-        
+        border-bottom: 1px solid grey;
+        display: flex;
+        flex-direction: row;
+       justify-content:space-evenly;
+       align-items: center;
     }
+    #checkcode{
+        display: flex;
+        flex-direction: row;
+        align-items: center;  
+    }
+  
     footer{
-        background-color: #4DB6AC;
+        background-color: #00CCC5;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -55,10 +64,10 @@
         font-size: 30px;
         text-align: center;
     }
+    
     </style>
 </head>
-<body>
-    
+<body> 
     <header>
         <img src="images/escaperoom6.png" style="width:17%; " >
         <img src="images/eng6bgheader.gif" style="width: 77%; ">
@@ -67,26 +76,52 @@
         <section class="pptp">
         
             <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSqOMRb5IT5Id-Adx2pn0-MeA20qi4I7Qpiz9cUdQl3Vitu9TVzMGAA-giCPIft0PgInUsMyWZWtBh9/embed?start=false&loop=true&delayms=60000" frameborder="0" width="45%" height="380" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="shadow-lg"></iframe>
-        
-        
-            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTJEP062blT70L-EpMAhzi87Z_q5xeHzA-vCqch8BVe4_w81t-taqJ242AT1jQw0lpnl2zsjbIJ4Pl7/embed?start=false&loop=true&delayms=1000" frameborder="0" width="45%" height="380px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="shadow-lg"></iframe>
-
-             
+    
+            <iframe  id="El" src="images/padlocktr2.png" frameborder="0" width="45%" height="380px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="shadow-lg">  
+            </iframe>   
         </section>
-    <div id="it"> </div> 
+    <div id="it" >
+        <div id="checkcode"><input id="code1" type="text"  >
+       <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check1()" > 
+        </div>
+        <div id="checkcode"><input id="code2" type="text"  >
+            <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check2()" > 
+             </div>
+    </div> 
     <div class="dvg">
-        <iframe src="https://learningapps.org/watch?v=pc7w42go323" style="border:0px;width:100%;height:550px" allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false" class="shadow-lg"></iframe>
+        <iframe id= "la" src="images/energy12.jpg" style="border:0px;width:100%;height:507px" allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false" class="shadow-lg"></iframe>
     </div>
     </main>
     <footer>
-        <h5 style="text-align: center; margin-top: 15px;">ЗА ДА ОТКЛЮЧИТЕ СТЯТА, ВЪВЕДЕТЕ КОДА ПОЛУЧЕН, КАТО ПОСЛЕДОВАТЕЛНО СЕ ЗАПИШАТ КОДОВЕТЕ ОТ ТРИТЕ ЗАДАЧИ</h5>
+        <h5 style="text-align: center; margin-top: 15px;">ЗА ДА ОТКЛЮЧИТЕ СТЯТА, ВЪВЕДЕТЕ ДУМАТА ОТ ПОСЛЕДНОТО ПРЕДИЗВИКАТЕЛСТВО </h5>
         <input id="textID" type="text"  >
         <input type="button" class="btn btn-secondary btn-lg" value="Escape the room" onclick="check()">
     </footer>
     <script>
+        const code1=document.getElementById('code1')
+        const show=document.getElementById('El')
+        
+        function check1(){
+            if(code1.value==='10'){
+            alert('БРАВО! ВИЕ ОТКЛЮЧИХТЕ СЛЕДВАЩОТО ПРЕДИЗВИКАТЕЛСТВО!');
+            show.src="https://docs.google.com/presentation/d/e/2PACX-1vTJEP062blT70L-EpMAhzi87Z_q5xeHzA-vCqch8BVe4_w81t-taqJ242AT1jQw0lpnl2zsjbIJ4Pl7/embed?start=false&loop=true&delayms=1000" 
+            }else{
+            alert('ГРЕШЕН КОД');
+            }
+        }
+        const code2=document.getElementById('code2')
+        const show2=document.getElementById('la')
+        function check2(){
+            if(code2.value==='9AI245'||code2.value==='9ai245'){
+            alert('БРАВО! ВИЕ ОТКЛЮЧИХТЕ СЛЕДВАЩОТО ПРЕДИЗВИКАТЕЛСТВО!');
+            show2.src="https://learningapps.org/watch?v=pkmeo8yi523"
+            }else{
+            alert('ГРЕШЕН КОД');
+            }
+        }
         const code=document.getElementById('textID')
         function check(){
-            if(code.value==='109AI2456' ||code.value==='109ai2456'){
+            if(code.value==='Механо' ||code.value==='МЕХАНО'){
             alert('БРАВО! ВИЕ УСПЯХТЕ!');
             code.value=""
             window.open('allend.html','_self');
