@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/b111.png">
+    <title>Virtual Escape School Game</title>
+    <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    } 
+    header{
+        display: flex;
+        justify-content: space-between;  
+        background-color: #8FEDFE;
+        border: 2px inset grey;   
+    }
+    .pptp{
+        width:100%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+           
+    }
+    .dvg{
+        width: 93%;
+        margin: -15px auto 20px ;
+    }
+    #it{
+        width: 100%;
+        height: 70px;
+        background-color:white;
+        position:sticky;
+        z-index: 1;
+        border-bottom: 1px solid grey;
+        display: flex;
+        flex-direction: row;
+       justify-content:space-evenly;
+       align-items: center;
+    }
+    #checkcode{
+        display: flex;
+        flex-direction: row;
+        align-items: center;  
+    }
+  
+    footer{
+        background-color: #4DB6AC;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        padding-bottom: 40px;
+        border: 1px solid grey;
+    }
+    input {
+        margin: 15px auto;
+        border: 1px solid grey;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    </style>
+</head>
+<body> 
+    <header>
+        <img src="images/escaperoom6.png" style="width:17%; " >
+        <img src="images/eng6bgheader.gif" style="width: 77%; ">
+    </header>
+    <main>
+        <section class="pptp">
+        
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSqOMRb5IT5Id-Adx2pn0-MeA20qi4I7Qpiz9cUdQl3Vitu9TVzMGAA-giCPIft0PgInUsMyWZWtBh9/embed?start=false&loop=true&delayms=60000" frameborder="0" width="45%" height="380" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="shadow-lg"></iframe>
+    
+            <iframe  id="El" src="images/padlocktr2.png" frameborder="0" width="45%" height="380px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="shadow-lg">  
+            </iframe>   
+        </section>
+    <div id="it" >
+        <div id="checkcode"><input id="code1" type="text"  >
+       <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check1()"> 
+        </div>
+        <div id="checkcode"><input id="code2" type="text"  >
+            <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check2()"> 
+             </div>
+    </div> 
+    <div class="dvg">
+        <iframe id= "la" src="images/padlocktr1.png" style="border:0px;width:100%;height:550px" allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false" class="shadow-lg"></iframe>
+    </div>
+    </main>
+    <footer>
+        <h5 style="text-align: center; margin-top: 15px;">ЗА ДА ОТКЛЮЧИТЕ СТЯТА, ВЪВЕДЕТЕ КОДА </h5>
+        <input id="textID" type="text"  >
+        <input type="button" class="btn btn-secondary btn-lg" value="Escape the room" onclick="check()">
+    </footer>
+    <script>
+        const code=document.getElementById('textID')
+        function check(){
+            if(code.value==='109AI2456' ||code.value==='109ai2456'){
+            alert('БРАВО! ВИЕ УСПЯХТЕ!');
+            code.value=""
+            window.open('allend.html','_self');
+            }else{
+            alert('ГРЕШЕН КОД');
+            }
+        }
+        const code1=document.getElementById('code1')
+        const show=document.getElementById('El')
+        
+        function check1(){
+            if(code1.value==='10'){
+            alert('БРАВО! ВИЕ ОТКЛЮЧИХТЕ СЛЕДВАЩОТО ПРЕДИЗВИКАТЕЛСТВО!');
+            show.src="https://docs.google.com/presentation/d/e/2PACX-1vTJEP062blT70L-EpMAhzi87Z_q5xeHzA-vCqch8BVe4_w81t-taqJ242AT1jQw0lpnl2zsjbIJ4Pl7/embed?start=false&loop=true&delayms=1000" 
+            }else{
+            alert('ГРЕШЕН КОД');
+            }
+        }
+        const code2=document.getElementById('code2')
+        const show1=document.getElementById('la')
+        function check(){
+            if(code2.value==='9AI245'||code.value==='9ai2456'){
+            alert('БРАВО! ВИЕ ОТКЛЮЧИХТЕ СЛЕДВАЩОТО ПРЕДИЗВИКАТЕЛСТВО!');
+            show1.src="https://learningapps.org/watch?v=pkmeo8yi523"
+            }else{
+            alert('ГРЕШЕН КОД');
+            }
+        }
+    </script>
+    
+   
+</body>
+</html>
