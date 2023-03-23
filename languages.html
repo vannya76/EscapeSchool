@@ -30,6 +30,29 @@
         flex-direction: row;
         justify-content: space-evenly;
     }
+    .ae{
+        width:100%;
+        height: 600px;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5px;
+        padding-bottom: 40px;
+        border: 3px solid grey;
+       
+    }
+    input {
+        margin: 10px auto;
+        border: 1px solid grey;
+        font-size: 30px;
+        text-align: center;
+    }
     </style>
 </head>
 <body>
@@ -39,7 +62,27 @@
         <img src="images/lang7.jpg" style="width:57%;"> 
     </header>
     <section class="pptp">
-    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQy0FU2vpj1dXBwrZJAopfSVkAgW9EnK-PLNhe6xgh8ErUsXINGL4ZST9Zu1umGsw/embed?start=false&loop=false&delayms=60000" frameborder="0" width="77%" height="620" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="shadow-lg"></iframe>
+    <iframe  src="https://docs.google.com/presentation/d/e/2PACX-1vQy0FU2vpj1dXBwrZJAopfSVkAgW9EnK-PLNhe6xgh8ErUsXINGL4ZST9Zu1umGsw/embed?start=false&loop=false&delayms=60000" frameborder="0" width="70%" height="567" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="shadow-lg" ></iframe>
     </section>
+    <section class="ae">
+
+    </section>
+    <footer>
+        <h5 style="text-align: center; margin-top: 30px;">ЗА ДА ОТКЛЮЧИТЕ СТЯТА, ПОЗНАЙТЕ ДУМАТА, КОЯТО СЕ ОБРАЗУВА ОТ ПОЛУЧЕНИЯ БУКВЕН КОД И Я ВЪВЕДЕТЕ В ПОЛЕТО. </h5>
+        <input id="textID" type="text"  >
+        <input type="button" class="btn btn-secondary btn-lg" value="Escape the room" onclick="check()">
+    </footer>
+    <script>
+        const code=document.getElementById('textID')
+        function check(){
+            if(code.value==='общество'||code.value==='ОБЩЕСТВО' ){
+            alert('ВИЕ УСПЯХТЕ ДА ИЗЛЕЗЕТЕ ОТ СТАЯТА');
+            code.value=""
+            window.open('prof.html','_self');
+            }else{
+            alert('ГРЕШЕН КОД');
+            }
+        }
+    </script>
 </body>
 </html>
