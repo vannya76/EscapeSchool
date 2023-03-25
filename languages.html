@@ -86,28 +86,28 @@
                 <img  src="images/alphabet1.jpg" class="card-img-top" alt="...">
                 <div class="card-body" >
                     <input class="card-title"  id="rid1" type="text"> 
-                    <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check1()" >
+                    <input type="button" class="btn btn-secondary btn-lg" value="Провери" id='btn1' onclick="check1()" >
                 </div>
               </div>    
               <div class="card m-3" style="width: 18rem; height:min-content;">
                 <img  src="images/computer.jpg" class="card-img-top" alt="...">  
                 <div class="card-body" >
                     <input class="card-title " id="rid2" type="text"> 
-                    <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check1()" >
+                    <input type="button" id='btn2' class="btn btn-secondary btn-lg" value="Провери" onclick="check2()" >
                 </div>           
               </div>           
               <div class="card m-3" style="width: 18rem;  height:min-content;">
                 <img  src="images/incorrectly.jpg" class="card-img-top" alt="...">
                 <div class="card-body" >
                     <input class="card-title " id="rid3" type="text"> 
-                    <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check1()" >
+                    <input type="button" id='btn3' class="btn btn-secondary btn-lg" value="Провери" onclick="check3()" >
                 </div>
              </div>
               <div class="card m-3 " style="width: 18rem; height:min-content;">
                 <img  src="images/children-pepuptheday3.jpg" class="card-img-top" alt="...">
                 <div class="card-body" >
                     <input class="card-title " id="rid4" type="text"> 
-                    <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check1()" >
+                    <input type="button" id='btn4' class="btn btn-secondary btn-lg" value="Провери"  onclick="check4()" >
                 </div>
               </div>
           </div>        
@@ -126,25 +126,40 @@
     const riddle2=document.getElementById('rid2')   
     const riddle3=document.getElementById('rid3')
     const riddle4=document.getElementById('rid4')
-       const check1=function(){
+    const bt1=document.getElementById('btn1')
+    const bt2=document.getElementById('btn2')   
+    const bt3=document.getElementById('btn3')
+    const bt4=document.getElementById('btn4')
+       const check1=function(bt1, rid1){
             if(riddle1.value==='Short'|| riddle1.value==='short'){
             alert('Correct')
             }
-            else if(riddle2.value==='Computer'|| riddle2.value==='computer'){
-            alert('Correct')
+            else{
+            alert('Wrong')
             }
-            else if(riddle3.value==='Incorrectly'|| riddle3.value==='incorrectly'){
+        }
+            const check2=function(bt2, rid2){
+           if(riddle2.value==='Computer'|| riddle2.value==='computer'){
             alert('Correct')
+            }else{
+            alert('Wrong')
             }
-            else if(riddle4.value==='3'|| riddle4.value==='Three'){
+        }
+        const check3=function(bt3, rid3){
+           if(riddle3.value==='Incorrectly'|| riddle3.value==='incorrectly'){
+            alert('Correct')
+        }else{
+            alert('Wrong')
+            }
+        }
+        const check4=function(bt4, rid4){
+           if(riddle4.value==='3'|| riddle4.value==='Three'){
             alert('Correct')
             }
             else{
             alert('Wrong')
     }
     }
-
-
         const code=document.getElementById('textID')
         function check(){
             if(code.value==='общество'||code.value==='ОБЩЕСТВО' ){
