@@ -16,9 +16,27 @@
     header{
         display: flex;
         justify-content: center;  
-        border: 2px inset grey; 
-        
+        border: 2px inset grey;   
         background-color: #21B581;
+    }
+    main{
+        width: 100%;
+        height: 600px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5px;
+        padding-bottom: 40px;
+        border: 3px solid grey;
+        background-color: #21B581;
+    }
+    input {
+        margin: 10px auto;
+        border: 1px solid grey;
+        font-size: 30px;
+        text-align: center;
     }
     </style>
 </head>
@@ -28,8 +46,26 @@
         <img src="images/escape room animation1.gif" style="width: 40%;" >
         <img src="images/lit2bl.jpg" style="width: 40%;" > 
     </header>
-    
-    
+    <main>
+
+    </main>
+    <footer>
+        <h5 style="text-align: center; margin-top: 30px;">ЗА ДА ОТКЛЮЧИТЕ СТЯТА, ПОЗНАЙТЕ ДУМАТА, КОЯТО СЕ ОБРАЗУВА ОТ ПОЛУЧЕНИЯ БУКВЕН КОД И Я ВЪВЕДЕТЕ В ПОЛЕТО. </h5>
+        <input id="textID" type="text"  >
+        <input type="button" class="btn btn-secondary btn-lg" value="Escape the room" onclick="check()">
+    </footer>
+    <script>
+        const code=document.getElementById('textID')
+        function check(){
+            if(code.value==='общество'||code.value==='ОБЩЕСТВО' ){
+            alert('ВИЕ УСПЯХТЕ ДА ИЗЛЕЗЕТЕ ОТ СТАЯТА');
+            code.value=""
+            window.open('pn.html','_self');
+            }else{
+            alert('ГРЕШЕН КОД');
+            }
+        }
+    </script>
    
 </body>
 </html>
