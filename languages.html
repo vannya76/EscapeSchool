@@ -85,29 +85,29 @@
               <div class="card m-3" style="width: 18rem; height:min-content;">
                 <img  src="images/alphabet1.jpg" class="card-img-top" alt="...">
                 <div class="card-body" >
-                    <input class="card-title" type="text"> 
-                    <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check()" >
+                    <input class="card-title"  id="rid1" type="text"> 
+                    <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check1()" >
                 </div>
               </div>    
               <div class="card m-3" style="width: 18rem; height:min-content;">
                 <img  src="images/computer.jpg" class="card-img-top" alt="...">  
                 <div class="card-body" >
-                    <input class="card-title" type="text"> 
-                    <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check()" >
+                    <input class="card-title " id="rid2" type="text"> 
+                    <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check1()" >
                 </div>           
               </div>           
               <div class="card m-3" style="width: 18rem;  height:min-content;">
                 <img  src="images/incorrectly.jpg" class="card-img-top" alt="...">
                 <div class="card-body" >
-                    <input class="card-title" type="text"> 
-                    <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check()" >
+                    <input class="card-title " id="rid3" type="text"> 
+                    <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check1()" >
                 </div>
              </div>
               <div class="card m-3 " style="width: 18rem; height:min-content;">
                 <img  src="images/children-pepuptheday3.jpg" class="card-img-top" alt="...">
                 <div class="card-body" >
-                    <input class="card-title" type="text"> 
-                    <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check()" >
+                    <input class="card-title " id="rid4" type="text"> 
+                    <input type="button" class="btn btn-secondary btn-lg" value="Провери" onclick="check1()" >
                 </div>
               </div>
           </div>        
@@ -122,6 +122,29 @@
         <input type="button" class="btn btn-secondary btn-lg" value="Escape the room" onclick="check()">
     </footer>
     <script>
+    const riddle1=document.getElementById('rid1')
+    const riddle2=document.getElementById('rid2')   
+    const riddle3=document.getElementById('rid3')
+    const riddle4=document.getElementById('rid4')
+       const check1=function(){
+            if(riddle1.value==='Short'|| riddle1.value==='short'){
+            alert('Correct')
+            }
+            else if(riddle2.value==='Computer'|| riddle2.value==='computer'){
+            alert('Correct')
+            }
+            else if(riddle3.value==='Incorrectly'|| riddle3.value==='incorrectly'){
+            alert('Correct')
+            }
+            else if(riddle4.value==='3'|| riddle4.value==='Three'){
+            alert('Correct')
+            }
+            else{
+            alert('Wrong')
+    }
+    }
+
+
         const code=document.getElementById('textID')
         function check(){
             if(code.value==='общество'||code.value==='ОБЩЕСТВО' ){
