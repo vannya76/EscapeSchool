@@ -57,7 +57,7 @@
     h4 {
             /*display: none;*/
         visibility: hidden;
-        margin:0px 10px;
+        margin:0px 15px;
         padding: 10px 10px;
         border:1px inset #21B581;
         border-radius: 15px;   
@@ -67,8 +67,10 @@
     .words{
             display:flex;
             flex-direction: row;
+            flex-wrap: wrap;
             justify-content:space-between;
-            width: 55%;
+            align-items: center;
+            width: 100%;
         }    
     </style>
 </head>
@@ -91,9 +93,10 @@
         <h4  class='shadow-lg --paragraph'>0</h4>
         <h4  class='shadow-lg --paragraph'>2</h4>
         <h4  class='shadow-lg --paragraph'>1</h4>
-        <h4  class='shadow-lg --paragraph'>8</h4>
-        <h4  class='shadow-lg btn btn-outline-success' style="visibility:visible; color: #DDAE5B ;padding:10px 10px; margin-left: 60px; font-size:20px; font-weight: 600; border-radius: 15px;" onclick="ok1()"> ПРОВЕРИ</h4>
-        </div>       
+        <h4  class='shadow-lg --paragraph'>8</h4> 
+        <input type="text" class='shadow-lg ' id="firstcheck" style="font-size: 25px; width:377px; height: 50px; text-align: center; border:1px inset #21B581; border-radius: 3px; " placeholder="Въведи получените координати"> 
+        <h4  class='shadow-lg btn btn-outline-success' style="visibility:visible; color: #DDAE5B ;padding:10px 10px;  font-size:20px; font-weight: 600; border-radius: 15px;" onclick="ok1()"> ПРОВЕРИ</h4>  
+        </div>    
     </section> 
 </main>
     <footer>
@@ -138,11 +141,11 @@
                 break;
             } 
         }             
-    const codes= document.getElementsByClassName('--paragraph')   
-    function ok1(){   
-        if(txt.style.backgroundColor="#21B581"){
-        alert('Поздравления! Открихте коортинатите. Порталът ще ви отведе към следващото ви изпитание.');
-        }
+     const check1=document.getElementById('firstcheck')
+    function ok1(){ 
+        if(check1.value==='4230218')
+        alert('Поздравления! Открихте коортинатите. Порталът ще ви отведе към следващото ви изпитание.');   
+         
     }  
 
         const code=document.getElementById('textID')
