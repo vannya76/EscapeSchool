@@ -71,7 +71,18 @@
             justify-content:space-between;
             align-items: center;
             width: 100%;
-        }    
+        }   
+     #portal{
+        visibility: hidden;
+        width: 100%;
+        background-color: #21B581;
+        background-image: url('images/portal1.gif');  
+        background-position: center;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-size:cover;
+        position: relative;
+     }    
     </style>
 </head>
 <body>  
@@ -97,8 +108,12 @@
         <input type="text" class='shadow-lg ' id="firstcheck" style="font-size: 25px; width:377px; height: 50px; text-align: center; border:1px inset #21B581; border-radius: 3px; " placeholder="Въведи получените координати"> 
         <h4  class='shadow-lg btn btn-outline-success' style="visibility:visible; color: #DDAE5B ;padding:10px 10px;  font-size:20px; font-weight: 600; border-radius: 15px;" onclick="ok1()"> ПРОВЕРИ</h4>  
         </div>    
-    </section> 
+    </section>
+    <div style="width: 100%;height: 30px; background-color: #21B581;"></div>     
 </main>
+<section class=" shadow-lg" id="portal">
+
+</section>
     <footer>
         <h5 style="text-align: center; margin-top: 30px;">ЗА ДА ОТКЛЮЧИТЕ СТАЯТА, ПОЗНАЙТЕ ДУМАТА, КОЯТО СЕ ОБРАЗУВА ОТ ПОЛУЧЕНИЯ БУКВЕН КОД И Я ВЪВЕДЕТЕ В ПОЛЕТО. </h5>
         <input id="textID" type="text"  >
@@ -142,12 +157,17 @@
             } 
         }             
      const check1=document.getElementById('firstcheck')
+     const portal1=document.getElementById('portal')
     function ok1(){ 
-        if(check1.value==='4230218')
-        alert('Поздравления! Открихте коортинатите. Порталът ще ви отведе към следващото ви изпитание.');   
-         
-    }  
-
+        if(check1.value==='4230218'){
+        alert('Поздравления! Открихте коортинатите. Порталът ще ви отведе към следващото ви изпитание.'); onclick= function(){
+            location.href='#portal';
+        }
+        portal1.style='visibility: visible';
+    } else{
+        alert('Грешни координати. Опитай отново.')
+        }
+    }   
         const code=document.getElementById('textID')
         function check(){
             if(code.value==='2023'){
