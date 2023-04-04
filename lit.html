@@ -81,7 +81,7 @@
     <main>
         <section class="shadow-lg">
             <h3 style="text-align: center; color: #DDAE5B;">Внимателно прочетете текста!</h3>
-            <p style="visibility: visible;">Добре дошли в стаята по български език и литература! Четенето на книги е както удоволствие, така и знание. То е своеобразен учител по време на <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[0])" onmousedown="recolor( this, txt[0])">житеиския</a>  ни път. Благодарение на него още преди да сме се сблъскали с <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[1])" onmousedown="recolor( this, txt[1])">действителноста</a> , ние вече имаме изграден модел за това, как можем да постъпим в определена  <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[2])" onmousedown="recolor( this, txt[2])">ситоация.</a> Литературата е портал към  <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[3])" onmousedown="recolor( this, txt[3])">неубятни</a>  светове и за да излезете от стаята, ще трябва да минете през него. <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[4])" onmousedown="recolor( this, txt[4])">Каде</a>  ли ще ви отведе? Трябва да зададете <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[5])" onmousedown="recolor( this, txt[5])">кординатите,</a> но първо ще трябва да ги откриете, а те са скрити в това съобщение. В него има 7 <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[6])" onmousedown="recolor( this, txt[6])">згрешени</a>  думи. Маркирайте ги и ще получите координатите.</p> 
+            <p style="visibility: visible;">Добре дошли в стаята по български език и литература! Четенето на книги е както удоволствие, така и знание. То е своеобразен учител по време на <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[0])" onmouseup="recolor( this, txt[0])">житеиския</a>  ни път. Благодарение на него още преди да сме се сблъскали с <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[1])" onmouseup="recolor( this, txt[1])">действителноста</a> , ние вече имаме изграден модел за това, как можем да постъпим в определена  <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[2])" onmouseup="recolor( this, txt[2])">ситоация.</a> Литературата е портал към  <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[3])" onmouseup="recolor( this, txt[3])">неубятни</a>  светове и за да излезете от стаята, ще трябва да минете през него. <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[4])" onmouseup="recolor( this, txt[4])">Каде</a>  ли ще ви отведе? Трябва да зададете <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[5])" onmouseup="recolor( this, txt[5])">кординатите,</a> но първо ще трябва да ги откриете, а те са скрити в това съобщение. В него има 7 <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[6])" onmouseup="recolor( this, txt[6])">згрешени</a>  думи. Маркирайте ги и ще получите координатите.</p> 
     </section>                         
     <section class="shadow-lg" id="words1">
         <div  class='words'>
@@ -102,12 +102,13 @@
         <input type="button" class="btn btn-secondary btn-lg" value="Escape the room" onclick="check()">
     </footer>
     <script>   
+    
     const show = function (_button, _which) {
             if (_which.style='visibility:hidden') {  
-                _which.style='visibility: visible'      
+                _which.style='visibility: visible'     
             }
             else {
-                _which.style.display = 'block'              
+                _which.style.display = 'block'        
             }
         }
 
@@ -115,39 +116,35 @@
      const recolor=function(_which){     
             switch(_which){
                 case txt[0]:
-                txt[0].style.backgroundColor="#21B581";
-                createEl(2,2)
+                txt[0].style.backgroundColor="#21B581"; 
                 break;
                 case txt[1]:
-                txt[1].style.backgroundColor="#21B581";
-                createEl(2,1)
+                txt[1].style.backgroundColor="#21B581";       
                 break;
                 case txt[2]:
                 txt[2].style.backgroundColor="#21B581";
-                createEl(3,1)
                 break;
                 case txt[3]:
                 txt[3].style.backgroundColor="#21B581";
-                createEl(0,1)
                 break;
                 case txt[4]:
                 txt[4].style.backgroundColor="#21B581";
-                createEl(2,1)
                 break;
                 case txt[5]:
                 txt[5].style.backgroundColor="#21B581";
-                createEl(1,1)
                 break;
                 case txt[6]:
                 txt[6].style.backgroundColor="#21B581";
-                createEl(2,4)
                 break;
             } 
         }             
+    const codes= document.getElementsByClassName('--paragraph')   
+    function ok1(){   
+        if(txt.style.backgroundColor="#21B581"){
+        alert('Поздравления! Открихте коортинатите. Порталът ще ви отведе към следващото ви изпитание.');
+        }
+    }  
 
-    function ok1(){ 
-         alert('Поздравления! Открихте коортинатите. Порталът ще ви отведе към следващото ви изпитание.');
-    }
         const code=document.getElementById('textID')
         function check(){
             if(code.value==='2023'){
