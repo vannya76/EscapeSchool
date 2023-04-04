@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/b111.png">
+    <title>Virtual Escape School Game</title>
+    <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    } 
+    header{
+        display: flex;
+        justify-content: center;  
+        border: 2px inset grey;   
+        background-color: #21B581;
+    }
+    main{
+        width: 100%;
+        height: 600px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5px;
+        padding-bottom: 40px;
+        border: 3px solid grey;
+        background-color: #21B581;
+    }
+    input {
+        margin: 10px auto;
+        border: 1px solid grey;
+        font-size: 30px;
+        text-align: center;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <img src="images/escape room animation1.gif" style="width: 40%;" >
+        <img src="images/lit2bl.jpg" style="width: 40%;" > 
+    </header>
+    <main>
+        <section>
+            <h1>Литературата - портал през времето и пространството</h1>
+            <h3>Внимателно прочетете текста!</h3>
+            <p>Добре дошли в стаята по български език и литература! Четенето на книги е както удоволствие, така и знание. То е своеобразен учител по време на <a class="--paragraph" onclick="recolor( this, txt[0])">житеиския</a> ни път. Благодарение на него още преди да сме се сблъскали с <a class="--paragraph" onclick="recolor(this, txt[1])">действителноста</a>, ние вече имаме изграден модел за това, как можем да постъпим в определена <a class="--paragraph" onclick="recolor(this, txt[2])">ситоация</a>. Литературата е портал към <a class="--paragraph" onclick="recolor(this, txt[3])">неубятни</a> светове и за да излезете от стаята, ще трябва да минете през него. <a class="--paragraph" onclick="recolor(this, txt[4])">Каде</a> ли ще ви отведе? Трябва да зададете <a class="--paragraph" onclick="recolor(this, txt[5])">кординатите</a>, но първо ще трябва да ги откриете, а те са скрити в това съобщение. В него има 7 <a class="--paragraph" onclick="recolor(this, txt[6])">згрешени</a> думи. Маркирайте ги и ще получите координатите.</p>
+            <div id="empty1"></div>
+        </section>
+    </main>
+    <footer>
+        <h5 style="text-align: center; margin-top: 30px;">ЗА ДА ОТКЛЮЧИТЕ СТЯТА, ПОЗНАЙТЕ ДУМАТА, КОЯТО СЕ ОБРАЗУВА ОТ ПОЛУЧЕНИЯ БУКВЕН КОД И Я ВЪВЕДЕТЕ В ПОЛЕТО. </h5>
+        <input id="textID" type="text"  >
+        <input type="button" class="btn btn-secondary btn-lg" value="Escape the room" onclick="check()">
+    </footer>
+    <script>
+       
+        const txt = document.getElementsByClassName('--paragraph')
+        const first=document.getElementById('empty1')
+         const recolor=function(_which){    
+            switch(_which){
+                case txt[0]:
+                txt[0].style.backgroundColor="#21B581";
+                break;             
+                case txt[1]:
+                txt[1].style.backgroundColor="#21B581";
+                break;
+                case txt[2]:
+                txt[2].style.backgroundColor="#21B581";
+                break;
+                case txt[3]:
+                txt[3].style.backgroundColor="#21B581";
+                break;
+                case txt[4]:
+                txt[4].style.backgroundColor="#21B581";
+                break;
+                case txt[5]:
+                txt[5].style.backgroundColor="#21B581";
+                break;
+                case txt[6]:
+                txt[6].style.backgroundColor="#21B581";
+                break;
+            } 
+           ok1()
+     }  
+                
+    function ok1(){
+        if (txt().backgroundColor='#21B581'){
+        first.innerHTML='Поздравления! Открихте коортинатите - 24643. Въведете ги и порталът ще ви отведе към следващото ви изпитание.'+"<input type='text'>";
+    }
+            }
+
+        const code=document.getElementById('textID')
+        function check(){
+            if(code.value==='2023'){
+            alert('ВИЕ УСПЯХТЕ ДА ИЗЛЕЗЕТЕ ОТ СТАЯТА');
+            code.value=""
+            window.open('pn.html','_self');
+            }else{
+            alert('ГРЕШЕН КОД');
+            }
+        }   
+    </script>
+   
+</body>
+</html>

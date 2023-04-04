@@ -13,15 +13,19 @@
         margin: 0px;
         padding: 0px;
     } 
+    body{
+        background-color: #21B581;
+    }
     header{
         display: flex;
         justify-content: center;  
-        border: 2px inset grey;   
+          
         background-color: #21B581;
     }
     main{
-        width: 100%;
-        height: 600px;
+       width: 95%;
+       background-color: white;
+       margin: 30px auto;
     }
     footer{
         display: flex;
@@ -38,6 +42,33 @@
         font-size: 30px;
         text-align: center;
     }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    p{
+        font-size: 20px;
+    }
+    section{   
+        margin: auto;
+        padding: 20px;
+        border: 1px solid grey;
+    }
+    .--code{
+        visibility: hidden;
+    }
+    h4 {
+            /*display: none;*/
+            visibility: hidden;  
+           
+        }
+    .words{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin:40px 0px;  
+        }
+       
     </style>
 </head>
 <body>
@@ -46,25 +77,103 @@
         <img src="images/escape room animation1.gif" style="width: 40%;" >
         <img src="images/lit2bl.jpg" style="width: 40%;" > 
     </header>
+    <h1 style="text-align: center; margin: 10px auto;">Литературата - портал през времето и пространството</h1>
     <main>
-
-    </main>
+        <div ><p style="visibility: visible;">Добре дошли в стаята по български език и литература! Четенето на книги е както удоволствие, така и знание. То е своеобразен учител по време на <a onclick="show(this, document.getElementsByClassName('--paragraph')[0])">житеиския</a>  ни път. Благодарение на него още преди да сме се сблъскали с <a onclick="show(this, document.getElementsByClassName('--paragraph')[1])">действителноста</a> , ние вече имаме изграден модел за това, как можем да постъпим в определена  <a  onclick="show(this, document.getElementsByClassName('--paragraph')[2])">ситоация.</a> Литературата е портал към  <a onclick="show(this, document.getElementsByClassName('--paragraph')[3])">неубятни</a>  светове и за да излезете от стаята, ще трябва да минете през него. <a onclick="show(this, document.getElementsByClassName('--paragraph')[4])">Каде</a>  ли ще ви отведе? Трябва да зададете <a onclick="show(this, document.getElementsByClassName('--paragraph')[5])">кординатите,</a> но първо ще трябва да ги откриете, а те са скрити в това съобщение. В него има 7 <a onclick="show(this, document.getElementsByClassName('--paragraph')[6])">згрешени</a>  думи. Маркирайте ги и ще получите координатите.
+          
+                     </p> 
+                </div>            
+          
+    </main>    
+    <section class="shadow-lg" id="words1">
+        <div  class='words'>
+        <h4  class='btn  btn-secondary slide-in-fwd-center shadow-lg  --paragraph'>4</h4>
+        <h4  class='btn  btn-secondary slide-in-fwd-center  --paragraph'>2</h4>
+        <h4  class='btn  btn-secondary slide-in-fwd-center --paragraph'>3</p>
+        <h4  class='btn  btn-secondary slide-in-fwd-center --paragraph'>0</h4>
+        <h4  class='btn  btn-secondary slide-in-fwd-center --paragraph'>2</h4>
+        <h4  class='btn  btn-secondary slide-in-fwd-center --paragraph'>1</h4>
+        <h4  class='btn  btn-secondary slide-in-fwd-center --paragraph'>8</h4>
+        </div>
+    </section> 
+        <section>
+            <h4 style="text-align: center; color: #DDAE5B;">Внимателно прочетете текста!</h4>
+            
+            <input type="button" class="btn btn-secondary btn-lg" value="Въведи" onclick="ok1()">
+            <div id="empty2"></div>
+        </section>
+        
+  
     <footer>
-        <h5 style="text-align: center; margin-top: 30px;">ЗА ДА ОТКЛЮЧИТЕ СТЯТА, ПОЗНАЙТЕ ДУМАТА, КОЯТО СЕ ОБРАЗУВА ОТ ПОЛУЧЕНИЯ БУКВЕН КОД И Я ВЪВЕДЕТЕ В ПОЛЕТО. </h5>
+        <h5 style="text-align: center; margin-top: 30px;">ЗА ДА ОТКЛЮЧИТЕ СТАЯТА, ПОЗНАЙТЕ ДУМАТА, КОЯТО СЕ ОБРАЗУВА ОТ ПОЛУЧЕНИЯ БУКВЕН КОД И Я ВЪВЕДЕТЕ В ПОЛЕТО. </h5>
         <input id="textID" type="text"  >
         <input type="button" class="btn btn-secondary btn-lg" value="Escape the room" onclick="check()">
     </footer>
-    <script>
+    <script>   
+const show = function (_button, _which) {
+            if (_which.style='visibility:hidden') {  
+                _which.style='visibility: visible'      
+            }
+            else {
+                _which.style.display = 'block'              
+            }
+        }
+
+        const txt = document.getElementsByClassName('--paragraph')     
+         const recolor=function(_which){     
+            switch(_which){
+                case txt[0]:
+                txt[0].style.backgroundColor="#21B581";
+                createEl(2,2)
+                break;
+                case txt[1]:
+                txt[1].style.backgroundColor="#21B581";
+                createEl(2,1)
+                break;
+                case txt[2]:
+                txt[2].style.backgroundColor="#21B581";
+                createEl(3,1)
+                break;
+                case txt[3]:
+                txt[3].style.backgroundColor="#21B581";
+                createEl(0,1)
+                break;
+                case txt[4]:
+                txt[4].style.backgroundColor="#21B581";
+                createEl(2,1)
+                break;
+                case txt[5]:
+                txt[5].style.backgroundColor="#21B581";
+                createEl(1,1)
+                break;
+                case txt[6]:
+                txt[6].style.backgroundColor="#21B581";
+                createEl(2,4)
+                break;
+            } 
+        }             
+    const newEl=document.getElementById('empty1')    
+    const createEl=function(a,b){  
+    newEl.innerHTML+="<button class='btn btn-outline-secondary btn-lg m-1'>"+  a*b  +"</buton>"
+   
+}
+let x= newEl.length; 
+    const newEl2=document.getElementById('empty2')
+    function ok1(){ 
+            console.log('x')
+        newEl2.innerHTML+='<p>Поздравления! Открихте коортинатите. Въведете ги в правилния ред и порталът ще ви отведе към следващото ви изпитание.</p>'+"<input type='text'>";
+    }
+
         const code=document.getElementById('textID')
         function check(){
-            if(code.value==='общество'||code.value==='ОБЩЕСТВО' ){
+            if(code.value==='2023'){
             alert('ВИЕ УСПЯХТЕ ДА ИЗЛЕЗЕТЕ ОТ СТАЯТА');
             code.value=""
             window.open('pn.html','_self');
             }else{
             alert('ГРЕШЕН КОД');
             }
-        }
+        }   
     </script>
    
 </body>
