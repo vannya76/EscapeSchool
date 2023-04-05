@@ -25,6 +25,7 @@
        width: 95%;
        background-color: white;
        margin: 30px auto;
+       position:sticky;
     }
     footer{
         display: flex;
@@ -103,8 +104,8 @@
         display: flex;
         flex-direction: row;
         justify-content:space-between; 
-        margin: 15px 0px;  
-        width: auto;
+        margin: 10px 0px;  
+        width:100%;
      }
      h5{
         padding:3px 7px;
@@ -123,18 +124,18 @@
         
          <div class="card text-bg-dark " style="width:85%; height:auto; margin: auto;">
             <img src="images/quiz22.jpg"   class="card-img" alt="...">
-            <div class="card-img-overlay ">
-                <div class="--inp"  style="margin-top:-10px;">
+            <div class="card-img-overlay row row-cols-1 row-cols-md-2 g-4 " >
+                <div class="--inp row row-cols-1 row-cols-md-2 g-4"  >
                <div class="meduza"   ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
                <div class="meduza"   ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
                <div class="meduza"  ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
                 </div>
-               <div class="--inp" style="justify-content:space-evenly; ">
+               <div class="--inp row row-cols-1 row-cols-md-2 g-4" style="justify-content:space-evenly; ">
                 <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"> </div> 
                 <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
                 <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
                  </div>
-                <div class="--inp">
+                <div class="--inp row row-cols-1 row-cols-md-2 g-4">
                     <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
                     <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
                     <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"> </div> 
@@ -163,10 +164,11 @@
         </div>  
         <div ><h3  class='shadow-lg btn btn-outline-success' style=" color: #DDAE5B ;padding:10px 10px;  font-size:20px; font-weight: 600; border-radius: 15px; margin: 10px 45%;" onclick="ok()"> ПРОВЕРИ</h3>   </div>
         
-    </section>
-    <div style="width: 100%;height: 30px; background-color: #21B581;"></div>     
+    </section>    
 </main>
-<section class=" shadow-lg" id="portal" onclick="window.open('lit1.html','_self')">
+<div style="width: 100%;height: 50px; background-color: #21B581; position:sticky; z-index: 1;"></div>
+<section>
+    <iframe src="https://learningapps.org/watch?v=p6vie0xrn23" style="border:0px;width:100%;height:500px; margin:-20px auto 30px; " allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false"></iframe>
 </section>
     <footer>
         <h5 style="text-align: center; margin-top: 30px;">ЗА ДА ОТКЛЮЧИТЕ СТАЯТА, ПОЗНАЙТЕ ДУМАТА, КОЯТО СЕ ОБРАЗУВА ОТ ПОЛУЧЕНИЯ БУКВЕН КОД И Я ВЪВЕДЕТЕ В ПОЛЕТО. </h5>
@@ -215,7 +217,7 @@ function drop(ev) {
             if(code.value==='2023'){
             alert('ВИЕ УСПЯХТЕ ДА ИЗЛЕЗЕТЕ ОТ СТАЯТА');
             code.value=""
-            window.open('pn.html','_self');
+            window.open('#','_self');
             }else{
             alert('ГРЕШЕН КОД');
             }
