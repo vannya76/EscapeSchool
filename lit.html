@@ -26,6 +26,15 @@
        background-color: white;
        margin: 30px auto;
     }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5px;
+        padding-bottom: 40px;
+        border: 3px solid grey;
+        background-color: #21B581;
+    }
     input {
         margin: 10px auto;
         border: 1px solid grey;
@@ -40,13 +49,12 @@
         font-size: 20px;
     }
     section{   
-        margin: auto;
+        margin: -15px auto;
         padding: 20px 40px;
         text-align: justify;
        /* border: 1px solid grey;*/
     }
     h4 {
-            /*display: none;*/
         visibility: hidden;
         margin:0px 15px;
         padding: 10px 10px;
@@ -55,13 +63,14 @@
         color: #DDAE5B;  
         height: 10%;
         }
-    .words{
+    .pics{
             display:flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content:space-between;
+            justify-content:space-evenly;
             align-items: center;
             width: 100%;
+           
         }   
      #portal2{
         visibility: hidden;
@@ -73,7 +82,34 @@
         background-repeat: no-repeat;
         background-size:cover;
         position: relative;
-     }    
+     }  
+     .meduza{
+        background-color:transparent;
+        border: 1px solid grey;
+        font-size: 20px;
+        margin: 15px 0px;
+        width: 200px;
+        height:150px;
+     }  
+     .dragable{
+        background-color:transparent;
+        border: 1px solid grey;
+        font-size: 20px;
+        margin: 15px 0px;
+        width:fit-content;
+        height:fit-content;
+       
+     }
+     .--inp{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between; 
+        margin: 50px 0px;  
+        width: auto;
+     }
+     h5{
+        padding:3px 7px;
+     }
     </style>
 </head>
 <body>  
@@ -81,67 +117,81 @@
         <img src="images/escape room animation1.gif" style="width: 40%;" >
         <img src="images/lit2bl.jpg" style="width: 40%;" > 
     </header>
-    <h1 style="text-align: center; margin: 10px auto;">Литературата - портал през времето и пространството</h1>
+    <h2 style="text-align: center; margin: 10px auto;">Старогръцка митология - тайната на Медуза</h2>
     <main>
         <section class="shadow-lg">
-            <h3 style="text-align: center; color: #DDAE5B;">Внимателно прочетете текста!</h3>
-            <p style="visibility: visible;">Добре дошли в стаята по български език и литература! Четенето на книги е както удоволствие, така и знание. То е своеобразен учител по време на <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[0])" onmouseup="recolor( this, txt[0])">житеиския</a>  ни път. Благодарение на него още преди да сме се сблъскали с <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[1])" onmouseup="recolor( this, txt[1])">действителноста</a> , ние вече имаме изграден модел за това, как можем да постъпим в определена  <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[2])" onmouseup="recolor( this, txt[2])">ситоация.</a> Литературата е портал към  <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[3])" onmouseup="recolor( this, txt[3])">неубятни</a>  светове и за да излезете от стаята, ще трябва да минете през него. <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[4])" onmouseup="recolor( this, txt[4])">Каде</a>  ли ще ви отведе? Трябва да зададете <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[5])" onmouseup="recolor( this, txt[5])">кординатите,</a> но първо ще трябва да ги откриете, а те са скрити в това съобщение. В него има 7 <a class="--green" onclick="show(this, document.getElementsByClassName('--paragraph')[6])" onmouseup="recolor( this, txt[6])">згрешени</a>  думи. Маркирайте ги и ще получите координатите.</p> 
+         <p >Вашето пътуване във времето ви отведе в Античността, където ще се срещнете с олимпийски богове, герои, митични същества. Но внимавайте, грози ви опасността никога да не напуснете тази епоха. Времето ви изтича, а и в мрака ви дебне горгона Медуза, която пази портала към следващото ви изпитание. За да се справите, разчитайте на знанията си за старогръцката митология. И не за бравяйте, не гледайте Медуза в очите...</p>
+        
+         <div class="card text-bg-dark ">
+            <img src="images/quiz22.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay ">
+                <div class="--inp"  style="margin-top: 0px;">
+               <div class="meduza" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+               <div class="meduza"  id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+               <div class="meduza" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                </div>
+               <div class="--inp" style="justify-content:space-evenly; ">
+                <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"> </div> 
+                <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                 </div>
+                <div class="--inp">
+                    <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                    <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                    <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"> </div> 
+                </div>
+            </div>
+          </div>      
     </section>                         
-    <section class="shadow-lg" id="words1">
-        <div  class='words'>
-        <h4  class='shadow-lg --paragraph'>4</h4>
-        <h4  class='shadow-lg --paragraph'>2</h4>
-        <h4  class='shadow-lg --paragraph'>3</h4>
-        <h4  class='shadow-lg --paragraph'>0</h4>
-        <h4  class='shadow-lg --paragraph'>2</h4>
-        <h4  class='shadow-lg --paragraph'>1</h4>
-        <h4  class='shadow-lg --paragraph'>8</h4> 
-        <input type="text" class='shadow-lg ' id="firstcheck" style="font-size: 25px; width:377px; height: 50px; text-align: center; border:1px inset #21B581; border-radius: 3px; " placeholder="Въведи получените координати"> 
-        <h4  class='shadow-lg btn btn-outline-success' style="visibility:visible; color: #DDAE5B ;padding:10px 10px;  font-size:20px; font-weight: 600; border-radius: 15px;" onclick="ok1()"> ПРОВЕРИ</h4>  
+    <section class="shadow-lg" id="pics1">
+        <div  class='pics'>
+            <div class="dragable" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/Troiwar.jpg" height="100px" id="drag1" draggable="true" ondragstart="drag(event)"></div>
+            <div class="dragable"  id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/poseidon.jpg" height="100px" id="drag2" draggable="true" ondragstart="drag(event)"></div>
+            <div class="dragable"  id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/Hades1.jpg" height="100px" id="drag3" draggable="true" ondragstart="drag(event)"></div>
+            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/gm.gif" height="100px" id="drag4" draggable="true" ondragstart="drag(event)"></div>
+            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/AHA.jpg" height="100px" id="drag5" draggable="true" ondragstart="drag(event)"></div>
+            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/zevs.jpg" height="100px" id="drag6" draggable="true" ondragstart="drag(event)"></div>  
+            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/ahil.jpg" height="100px"  id="drag7" draggable="true" ondragstart="drag(event)"></div>
+        </div> 
+        <div  class='pics' >   
+            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag8" draggable="true" ondragstart="drag(event)">Минотавър</h5></div>
+            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag9" draggable="true" ondragstart="drag(event)">Персей</h5></div>
+            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag10" draggable="true" ondragstart="drag(event)">Хектор</h5></div>
+            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag11" draggable="true" ondragstart="drag(event)">Прометей</h5></div>
+            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag12" draggable="true" ondragstart="drag(event)">Ябълката на раздора</h5></div>
+            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag13" draggable="true" ondragstart="drag(event)">Тезей</h5></div>   
+            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag14" draggable="true" ondragstart="drag(event)">Олимп</h5></div>
         </div>    
     </section>
-         
+    <div style="width: 100%;height: 30px; background-color: #21B581;"></div>     
 </main>
 <section class=" shadow-lg" id="portal" onclick="window.open('lit1.html','_self')">
 </section>
-   
+    <footer>
+        <h5 style="text-align: center; margin-top: 30px;">ЗА ДА ОТКЛЮЧИТЕ СТАЯТА, ПОЗНАЙТЕ ДУМАТА, КОЯТО СЕ ОБРАЗУВА ОТ ПОЛУЧЕНИЯ БУКВЕН КОД И Я ВЪВЕДЕТЕ В ПОЛЕТО. </h5>
+        <input id="textID" type="text"  >
+        <input type="button" class="btn btn-secondary btn-lg" value="Escape the room" onclick="check()">
+    </footer>
     <script>   
     
-    const show = function (_button, _which) {
-            if (_which.style='visibility:hidden') {  
-                _which.style='visibility: visible'     
-            }
-            else {
-                _which.style.display = 'block'        
-            }
-        }
+function allowDrop(ev) {
+  ev.preventDefault();
+}
 
-     const txt = document.getElementsByClassName('--green')     
-     const recolor=function(_which){     
-            switch(_which){
-                case txt[0]:
-                txt[0].style.backgroundColor="#21B581"; 
-                break;
-                case txt[1]:
-                txt[1].style.backgroundColor="#21B581";       
-                break;
-                case txt[2]:
-                txt[2].style.backgroundColor="#21B581";
-                break;
-                case txt[3]:
-                txt[3].style.backgroundColor="#21B581";
-                break;
-                case txt[4]:
-                txt[4].style.backgroundColor="#21B581";
-                break;
-                case txt[5]:
-                txt[5].style.backgroundColor="#21B581";
-                break;
-                case txt[6]:
-                txt[6].style.backgroundColor="#21B581";
-                break;
-            } 
-        }             
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+    
+
+
+
      const check1=document.getElementById('firstcheck')
      const portal1=document.getElementById('portal')
     function ok1(){ 
@@ -156,6 +206,17 @@
         alert('Грешни координати. Опитай отново.')
         }
     }
+     
+    const code=document.getElementById('textID')
+    function check(){
+            if(code.value==='2023'){
+            alert('ВИЕ УСПЯХТЕ ДА ИЗЛЕЗЕТЕ ОТ СТАЯТА');
+            code.value=""
+            window.open('pn.html','_self');
+            }else{
+            alert('ГРЕШЕН КОД');
+            }
+        }   
     </script>
    
 </body>
