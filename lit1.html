@@ -86,12 +86,11 @@
      .meduza{
         background-color:transparent;
         border: 1px solid grey;
-        font-size: 20px;
         margin: 15px 0px;
         width: 200px;
         height:150px;
      }  
-     .dragable{
+     .draggable{
         background-color:transparent;
         border: 1px solid grey;
         font-size: 20px;
@@ -104,7 +103,7 @@
         display: flex;
         flex-direction: row;
         justify-content:space-between; 
-        margin: 50px 0px;  
+        margin: 15px 0px;  
         width: auto;
      }
      h5{
@@ -122,13 +121,13 @@
         <section class="shadow-lg">
          <p >Вашето пътуване във времето ви отведе в Античността, където ще се срещнете с олимпийски богове, герои, митични същества. Но внимавайте, грози ви опасността никога да не напуснете тази епоха. Времето ви изтича, а и в мрака ви дебне горгона Медуза, която пази портала към следващото ви изпитание. За да се справите, разчитайте на знанията си за старогръцката митология. И не за бравяйте, не гледайте Медуза в очите...</p>
         
-         <div class="card text-bg-dark ">
-            <img src="images/quiz22.jpg" class="card-img" alt="...">
+         <div class="card text-bg-dark " style="width:85%; height:auto; margin: auto;">
+            <img src="images/quiz22.jpg"   class="card-img" alt="...">
             <div class="card-img-overlay ">
-                <div class="--inp"  style="margin-top: 0px;">
-               <div class="meduza" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
-               <div class="meduza"  id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
-               <div class="meduza" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                <div class="--inp"  style="margin-top:-10px;">
+               <div class="meduza"   ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+               <div class="meduza"   ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+               <div class="meduza"  ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
                 </div>
                <div class="--inp" style="justify-content:space-evenly; ">
                 <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"> </div> 
@@ -145,23 +144,25 @@
     </section>                         
     <section class="shadow-lg" id="pics1">
         <div  class='pics'>
-            <div class="dragable" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/Troiwar.jpg" height="100px" id="drag1" draggable="true" ondragstart="drag(event)"></div>
-            <div class="dragable"  id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/poseidon.jpg" height="100px" id="drag2" draggable="true" ondragstart="drag(event)"></div>
-            <div class="dragable"  id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/Hades1.jpg" height="100px" id="drag3" draggable="true" ondragstart="drag(event)"></div>
-            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/gm.gif" height="100px" id="drag4" draggable="true" ondragstart="drag(event)"></div>
-            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/AHA.jpg" height="100px" id="drag5" draggable="true" ondragstart="drag(event)"></div>
-            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/zevs.jpg" height="100px" id="drag6" draggable="true" ondragstart="drag(event)"></div>  
-            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/ahil.jpg" height="100px"  id="drag7" draggable="true" ondragstart="drag(event)"></div>
+            <div class="draggable"  ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/Troiwar.jpg" height="100px" id="drag1" draggable="true" ondragstart="drag(event)"></div>
+            <div class="draggable"   ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/poseidon.jpg" height="100px" id="drag2" draggable="true" ondragstart="drag(event)"></div>
+            <div class="draggable"   ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/Hades1.jpg" height="100px" id="drag3" draggable="true" ondragstart="drag(event)"></div>
+            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/gm.gif" height="100px" id="drag4" draggable="true" ondragstart="drag(event)"></div>
+            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/AHA.jpg" height="100px" id="drag5" draggable="true" ondragstart="drag(event)"></div>
+            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/zevs.jpg" height="100px" id="drag6" draggable="true" ondragstart="drag(event)"></div>  
+            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)"> <img src="images/ahil.jpg" height="100px"  id="drag7" draggable="true" ondragstart="drag(event)"></div>
         </div> 
         <div  class='pics' >   
-            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag8" draggable="true" ondragstart="drag(event)">Минотавър</h5></div>
-            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag9" draggable="true" ondragstart="drag(event)">Персей</h5></div>
-            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag10" draggable="true" ondragstart="drag(event)">Хектор</h5></div>
-            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag11" draggable="true" ondragstart="drag(event)">Прометей</h5></div>
-            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag12" draggable="true" ondragstart="drag(event)">Ябълката на раздора</h5></div>
-            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag13" draggable="true" ondragstart="drag(event)">Тезей</h5></div>   
-            <div class="dragable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag14" draggable="true" ondragstart="drag(event)">Олимп</h5></div>
-        </div>    
+            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag8" draggable="true" ondragstart="drag(event)">Минотавър</h5></div>
+            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag9" draggable="true" ondragstart="drag(event)">Персей</h5></div>
+            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag10" draggable="true" ondragstart="drag(event)">Хектор</h5></div>
+            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag11" draggable="true" ondragstart="drag(event)">Прометей</h5></div>
+            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag12" draggable="true" ondragstart="drag(event)">Ябълката на раздора</h5></div>
+            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag13" draggable="true" ondragstart="drag(event)">Тезей</h5></div>  
+            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag14" draggable="true" ondragstart="drag(event)">Олимп</h5></div>
+        </div>  
+        <div ><h3  class='shadow-lg btn btn-outline-success' style=" color: #DDAE5B ;padding:10px 10px;  font-size:20px; font-weight: 600; border-radius: 15px; margin: 10px 45%;" onclick="ok()"> ПРОВЕРИ</h3>   </div>
+        
     </section>
     <div style="width: 100%;height: 30px; background-color: #21B581;"></div>     
 </main>
@@ -188,7 +189,9 @@ function drop(ev) {
   ev.target.appendChild(document.getElementById(data));
 }
 
-    
+    function ok(){
+     
+    }
 
 
 
