@@ -59,15 +59,7 @@
         text-align: justify;
        /* border: 1px solid grey;*/
     }
-    h4 {
-        visibility: hidden;
-        margin:0px 15px;
-        padding: 10px 10px;
-        border:1px inset #21B581;
-        border-radius: 15px;   
-        color: #DDAE5B;  
-        height: 10%;
-        }
+   
     .pics{
             display:flex;
             flex-direction: row;
@@ -190,8 +182,8 @@
     </section>    
 </main>
 <div style="width: 100%;height: 50px; background-color: #21B581; position:sticky; z-index: 1;"></div>
-<section>
-    <iframe src="https://learningapps.org/watch?v=p6vie0xrn23" style="border:0px;width:100%;height:500px; margin:-20px auto 30px; " allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false"></iframe>
+<section id="bg" style="visibility: hidden;">
+    <iframe src="https://learningapps.org/watch?v=p6vie0xrn23" style="border:0px;width:100%;height:500px; margin:-20px auto 30px; " allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false" onclick="ok2()"></iframe>
 </section>
     <footer>
         <h5 style="text-align: center; margin-top: 30px;">ЗА ДА ОТКЛЮЧИТЕ СТАЯТА, ПОЗНАЙТЕ ДУМАТА, КОЯТО СЕ ОБРАЗУВА ОТ ПОЛУЧЕНИЯ БУКВЕН КОД И Я ВЪВЕДЕТЕ В ПОЛЕТО. </h5>
@@ -219,6 +211,7 @@ function ok() {
 
         if(checkMatchedImages()) {
             message = 'Поздравления! Щом четете това, значи не сте се превърнали в статуи, разрешили сте загадката и можете да отворите портала на Медуза, който ще ви отведе към следващото изпитание.';
+            ok1();
         }
 
         alert(message);
@@ -236,22 +229,17 @@ function ok() {
         return valid;
     }
 
-
-
-     const check1=document.getElementById('firstcheck')
-     const portal1=document.getElementById('portal')
+    const show=document.getElementById('bg')      
     function ok1(){ 
-        if(check1.value==='4230218'){
-        alert('Поздравления! Открихте коортинатите. Порталът ще ви отведе към следващото ви изпитание.'); onclick= function(){
-            portal1.style='visibility: visible';
-            portal1.id="portal2"
-            location.href='#portal2';
+        show.style="visibility:visible";
+        location.href='#bg';
         }
         
-    } else{
-        alert('Грешни координати. Опитай отново.')
-        }
+    
+    function ok2(){   
+        show.src="https://docs.google.com/presentation/d/e/2PACX-1vTJEP062blT70L-EpMAhzi87Z_q5xeHzA-vCqch8BVe4_w81t-taqJ242AT1jQw0lpnl2zsjbIJ4Pl7/embed?start=false&loop=true&delayms=1000" ;
     }
+
      
     const code=document.getElementById('textID')
     function check(){
