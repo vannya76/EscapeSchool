@@ -73,7 +73,7 @@
         visibility: hidden;
         width: 100%;
         background-color:white;
-        background-image: url('images/portal1.gif');  
+        background-image: url('images/portal3.gif');  
         background-position: center;
         height: 600px;
         background-repeat: no-repeat;
@@ -182,11 +182,12 @@
     </section>    
 </main>
 <div style="width: 100%;height: 50px; background-color: #21B581; position:sticky; z-index: 1;"></div>
-<section id="bg" style="visibility: hidden;">
-    <iframe src="https://learningapps.org/watch?v=p6vie0xrn23" style="border:0px;width:100%;height:500px; margin:-20px auto 30px; " allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false" onclick="ok2()"></iframe>
+
+<section id="portal" class=" shadow-lg" style="visibility: hidden;" onclick="ok2()">
+    <iframe id="bg" src="https://learningapps.org/watch?v=p6vie0xrn23" style="border:0px;width:100%;height:550px; margin:-20px auto 30px; visibility: hidden; " allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false" ></iframe>
 </section>
     <footer>
-        <h5 style="text-align: center; margin-top: 30px;">ЗА ДА ОТКЛЮЧИТЕ СТАЯТА, ПОЗНАЙТЕ ДУМАТА, КОЯТО СЕ ОБРАЗУВА ОТ ПОЛУЧЕНИЯ БУКВЕН КОД И Я ВЪВЕДЕТЕ В ПОЛЕТО. </h5>
+        <h5 style="text-align: center; margin-top: 30px;">ЗА ДА ОТКЛЮЧИТЕ СТАЯТА ВЪВЕДЕТЕ КООРДИНАТИТЕ</h5>
         <input id="textID" type="text"  >
         <input type="button" class="btn btn-secondary btn-lg" value="Escape the room" onclick="check()">
     </footer>
@@ -229,24 +230,27 @@ function ok() {
         return valid;
     }
 
-    const show=document.getElementById('bg')      
+    const show=document.getElementById('portal')      
     function ok1(){ 
+        location.href='#portal';
+        show.id="portal2"
         show.style="visibility:visible";
-        location.href='#bg';
+        
         }
         
-    
+    const showbg=document.getElementById('bg')
     function ok2(){   
-        show.src="https://learningapps.org/watch?v=p6vie0xrn23" ;
+        show.id="portal"
+        showbg.style="visibility:visible; width:100%; height:550px; margin:-20px auto 30px;"   
     }
-
-     
+    
+      
     const code=document.getElementById('textID')
     function check(){
             if(code.value==='2023'){
             alert('ВИЕ УСПЯХТЕ ДА ИЗЛЕЗЕТЕ ОТ СТАЯТА');
             code.value=""
-            window.open('#','_self');
+            window.open('pn.html','_self');
             }else{
             alert('ГРЕШЕН КОД');
             }
