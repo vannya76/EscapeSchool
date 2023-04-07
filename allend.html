@@ -37,7 +37,10 @@
             width:100%;
         }
         main{
-            margin-top: -20px;
+            margin: 0px auto ;
+            width:100%;   
+            height:auto;
+           
         }
         section{
             width: 90%;
@@ -121,49 +124,47 @@ footer{
 </head>
 <body>
     <header class="shadow">
-    <h4 style="padding: 20px;">БРАВО! УСПЕШНО ПРЕМИНАХТЕ ПРЕЗ ВСИЧКИ ЗАКЛЮЧЕНИ СТАИ И СТЕ НА СТЪПКА ОТ КРАЯ НА ПРИКЛЮЧЕНИЕТО. ЗА ЦЕЛТА КЛИКНЕТЕ НА БУТОНИТЕ  ПОД ВСЯКА СТАЯ.</h4>
+    <h4 style="padding: 20px; font-size: 2vw;">БРАВО! УСПЕШНО ПРЕМИНАХТЕ ПРЕЗ ВСИЧКИ ЗАКЛЮЧЕНИ СТАИ И СТЕ НА СТЪПКА ОТ КРАЯ НА ПРИКЛЮЧЕНИЕТО. ЗА ЦЕЛТА КЛИКНЕТЕ НА БУТОНИТЕ  ПОД ВСЯКА СТАЯ.</h4>
     </header>
     <main>
-        <div class="m-0 -fldex  justify-content-center row " >
-            <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
+        <div class="mb-5 -fldex  justify-content-center row " >
+            <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 20rem; ">
                 <img src="images/math.jpg" style="height:100%;" >
                 <div class="card-img-overlay shadow-lg" >
                   <a > <img class= "questmark" src="images/lock1.gif"  >  </a>
                  <a href="#words1"  style="text-decoration: none;"> <h1  onclick="show(this, document.getElementsByClassName('--paragraph')[0])">ESCAPED</h1></a>  
                 </div>            
             </div>
-            <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
+            <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 20rem; ">
                 <img src="images/lit2.jpg" style="height:100%;">
                 <div class="card-img-overlay shadow-lg">
                     <a ><img class= "questmark" src="images/lock1.gif"  > </a> 
                     <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[1])">ESCAPED</h1> </a> 
                 </div>            
             </div>       
-            <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
+            <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 20rem; ">
                 <img src="images/pn3.jpg" style="height:100%;">
                 <div class="card-img-overlay shadow-lg">
                     <a ><img class= "questmark" src="images/lock1.gif"  > </a> 
                     <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[2])">ESCAPED</h1>  </a>
                 </div>            
             </div>           
-        </div>
-
-        <div class="m-0 -fldex  justify-content-center row">
-            <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
+    
+            <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 20rem; ">
                 <img src="images/abc.jpg" style="height:100%;">
                 <div class="card-img-overlay shadow-lg">
                     <a ><img class= "questmark" src="images/lock1.gif" > </a> 
                     <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[3])">ESCAPED</h1>  </a>
                 </div>            
             </div>
-            <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
+            <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 20rem; ">
                 <img src="images/bul2.jpg" style="height:99%">
                 <div class="card-img-overlay shadow-lg" >
                     <a ><img class= "questmark" src="images/lock1.gif" > </a> 
                     <a href="#words1" style="text-decoration: none;"><h1 onclick="show(this, document.getElementsByClassName('--paragraph')[4])">ESCAPED</h1> </a>
                 </div>            
             </div>       
-            <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width: 18rem; ">
+            <div class="card coll-md-3 coll-sm-12 m-5 p-0 shadow-lg" style="width:20rem; ">
                 <img src="images/elektr3.png" style="height:100%;">
                 <div class="card-img-overlay shadow-lg">
                     <a ><img class= "questmark" src="images/lock1.gif"  >  </a>
@@ -183,9 +184,9 @@ footer{
         </div>
     </section>  
     <footer class="shadow">
-        <h4 style="padding: 20px;">ПОДРЕДЕТЕ ДУМИТЕ ТАКА, ЧЕ ДА ОБРАЗУВАТ ИЗВЕСТНА СЕНТЕНЦИЯ И НЕЙНИЯ АВТОР. ЗАПИШЕТЕ ГИ В ПОЛЕТО.</h4>  
-        <textarea id="textID"  class="shadow-lg"  ></textarea>
-        <input type="button" class="btn btn-secondary btn-lg shadow-lg" value="Escape the School" onclick="check()">
+        <h4 style="padding: 20px;font-size: 1.5vw;">ПОДРЕДЕТЕ ДУМИТЕ ТАКА, ЧЕ ДА ОБРАЗУВАТ ИЗВЕСТНА СЕНТЕНЦИЯ И НЕЙНИЯ АВТОР. ЗАПИШЕТЕ ГИ В ПОЛЕТО.</h4>  
+        <textarea id="textID"  class="shadow-lg" style="font-size: 1.5vw;" ></textarea>
+        <img src="images/1.png" class="btn shadow-lg " onclick="check()" style="width:20%; border-radius:30px;" >
     </footer> 
     <script>
         const show = function (_button, _which) {
