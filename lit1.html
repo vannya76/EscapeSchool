@@ -85,8 +85,8 @@
         background-color:transparent;
         border: 1px solid grey;
         margin: 15px 0px;
-        width: 200px;
-        height:150px;
+        width: 20%;
+        height:90%;
      }  
      .draggable{
         background-color:transparent;
@@ -100,6 +100,7 @@
      .--inp{
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
         justify-content:space-between; 
         margin: 10px 0px;  
         width:100%;
@@ -127,10 +128,12 @@
                     <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="zeus"></div>
                     <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="achilles"></div>
-               <div class="--inp row row-cols-1 row-cols-md-3 g-3" style="justify-content:space-evenly; ">
+               </div>
+                <div class="--inp row row-cols-1 row-cols-md-3 g-3" style="justify-content:space-evenly; ">
                 <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="troy"></div>
                 <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="poseidon"></div>
                 <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="hades"></div>
+                </div>
                 <div class="--inp row row-cols-1 row-cols-md-3 g-3">
                     <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="apple"></div>
                     <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="medusa"></div>
