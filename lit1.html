@@ -87,14 +87,16 @@
         margin: 15px 0px;
         width: 20%;
         height:90%;
+        position: static;
      }  
      .draggable{
         background-color:transparent;
         border: 1px solid grey;
-        font-size: 20px;
-        margin: 15px 0px;
-        width:fit-content;
-        height:fit-content;
+       /* font-size: 20px;*/
+        margin: 7px 0px;
+        font-size: 2vw;
+       /*width:fit-content;
+        height:fit-content;*/
        
      }
      .--inp{
@@ -102,12 +104,17 @@
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content:space-between; 
-        margin: 10px 0px;  
+        margin: 5px 0px;  
         width:100%;
+       
+        
      }
      h5{
         padding:3px 7px;
         font-size: 1.7vw;
+     }
+     .move{
+        height: 7vw;
      }
     </style>
 </head>
@@ -123,18 +130,18 @@
         
          <div class="card text-bg-dark " style="width:85%; height:auto; margin: auto;">
             <img src="images/quiz22.jpg"   class="card-img" alt="...">
-            <div class="card-img-overlay row row-cols-1 row-cols-md-3 g-3 " >
-                <div class="--inp row row-cols-1 row-cols-md-3 g-3"  >
+            <div class="card-img-overlay row row-cols-1 row-cols-md-1 g-3 " >
+                <div class="--inp row row-cols-1 row-cols-md-1 "  >
                     <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="zeus"></div>
                     <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="achilles"></div>
                </div>
-                <div class="--inp row row-cols-1 row-cols-md-3 g-3" style="justify-content:space-evenly; ">
+                <div class="--inp row row-cols-1 row-cols-md-1 " style="justify-content:space-evenly; ">
                 <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="troy"></div>
                 <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="poseidon"></div>
                 <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="hades"></div>
                 </div>
-                <div class="--inp row row-cols-1 row-cols-md-3 g-3">
+                <div class="--inp row row-cols-1 row-cols-md-1 ">
                     <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="apple"></div>
                     <div class="meduza wrapImage" ondrop="drop(event)" ondragover="allowDrop(event)" data-image="medusa"></div>
                     <div class="meduza" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -145,31 +152,31 @@
     <section class="shadow-lg" id="pics1">
         <div  class='pics'>
             <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img src="images/Troiwar.jpg" height="100px" id="troy"
+                <img class="move" src="images/Troiwar.jpg"  id="troy"
                      draggable="true" ondragstart="drag(event)">
             </div>
             <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img src="images/poseidon.jpg" height="100px" id="poseidon"
+                <img class="move" src="images/poseidon.jpg"  id="poseidon"
                      draggable="true" ondragstart="drag(event)">
             </div>
             <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img src="images/Hades1.jpg" height="100px" id="hades"
+                <img class="move" src="images/Hades1.jpg"  id="hades"
                      draggable="true" ondragstart="drag(event)">
             </div>
             <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img src="images/gm.gif" height="100px" id="medusa"
+                <img class="move" src="images/gm.gif"  id="medusa"
                      draggable="true" ondragstart="drag(event)">
             </div>
             <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img src="images/AHA.jpg" height="100px" id="apple"
+                <img  class="move" src="images/AHA.jpg"  id="apple"
                      draggable="true" ondragstart="drag(event)">
             </div>
             <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img src="images/zevs.jpg" height="100px" id="zeus"
+                <img class="move" src="images/zevs.jpg"  id="zeus"
                      draggable="true" ondragstart="drag(event)">
             </div>
             <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img src="images/ahil.jpg" height="100px" id="achilles"
+                <img class="move" src="images/ahil.jpg"  id="achilles"
                      draggable="true" ondragstart="drag(event)">
             </div>
         </div> 
@@ -182,7 +189,7 @@
             <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag13" draggable="true" ondragstart="drag(event)">Тезей</h5></div>  
             <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)"> <h5 id="drag14" draggable="true" ondragstart="drag(event)">Олимп</h5></div>
         </div>  
-        <div ><h3  class='shadow-lg btn btn-outline-success' style=" color: #DDAE5B ;padding:10px 10px;  font-size:20px; font-weight: 600; border-radius: 15px; margin: 10px 45%;" onclick="ok()"> ПРОВЕРИ</h3>   </div>
+        <div ><h3  class='shadow-lg btn btn-outline-success' style=" color: #DDAE5B ;padding:10px 10px;  font-size:2vw; font-weight: 600; border-radius: 15px; margin: 15px 45%;" onclick="ok()"> ПРОВЕРИ</h3>   </div>
         
     </section>    
 </main>
