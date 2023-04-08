@@ -51,13 +51,17 @@
         p {
             /*display: none;*/
             visibility: hidden;  
+            size: 18rem;
+            width:fit-content;
            
         }
         .words{
             display:flex;
             flex-direction: row;
+            flex-wrap: wrap;
             justify-content: space-evenly;
-            margin:40px 0px;  
+            margin:20px 0px; 
+            height:fit-content; 
         }
     .slide-in-fwd-center {
 	-webkit-animation: slide-in-fwd-center 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s infinite alternate-reverse both;
@@ -115,7 +119,7 @@ footer{
         width: 90%;
         margin: 10px auto;
         border: 1px solid grey;
-        font-size: 30px;
+        font-size:3vw;
         text-align: center;
         color:rgba(31, 30, 30, 0.977);
     }
@@ -184,8 +188,8 @@ footer{
         </div>
     </section>  
     <footer class="shadow">
-        <h4 style="padding: 20px;font-size: 1.5vw;">ПОДРЕДЕТЕ ДУМИТЕ ТАКА, ЧЕ ДА ОБРАЗУВАТ ИЗВЕСТНА СЕНТЕНЦИЯ И НЕЙНИЯ АВТОР. ЗАПИШЕТЕ ГИ В ПОЛЕТО.</h4>  
-        <textarea id="textID"  class="shadow-lg" style="font-size: 1.5vw;" ></textarea>
+        <h4 style="padding: 20px;font-size: 2vw;">ПОДРЕДЕТЕ ДУМИТЕ ТАКА, ЧЕ ДА ОБРАЗУВАТ ИЗВЕСТНА СЕНТЕНЦИЯ И НЕЙНИЯ АВТОР. ЗАПИШЕТЕ ГИ В ПОЛЕТО.</h4>  
+        <textarea id="textID"  class="shadow-lg"  ></textarea>
         <img src="images/1.png" class="btn shadow-lg " onclick="check()" style="width:20%; border-radius:30px;" >
     </footer> 
     <script>
