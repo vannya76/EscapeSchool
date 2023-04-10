@@ -39,7 +39,7 @@
         .questmark{
             width:24vw ; 
             height:19vw;
-            margin: -17px 0px 0px -17px;
+            margin: -23px 0px -17px -17px;
            /* width:20vw ; 
             height:18vw;
             margin: -7px 0px 0px 7px;*/
@@ -63,24 +63,33 @@
         
         section{
             width: 90%;
-            height:150px;
-            margin:30px auto;
+            height:fit-content;
+            padding: 20px 0px;
+            margin:10px auto 30px;
             border: 1px solid grey;
         }
-        p {
-            /*display: none;*/
-            visibility: hidden;  
-            size: 18rem;
-            width:fit-content;
-           
-        }
+  
         .words{
             display:flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
-            margin:20px 0px; 
-            height:fit-content; 
+            margin:auto ; 
+            height:100%; 
+        }
+        p {
+            /*display: none;*/
+            visibility: hidden;       
+            font-size: 1.5vw;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color:rgb(17, 17, 32);
+            font-weight: 400;
+            text-align: center;
+            margin: auto;
+            border: 1px solid gray;
+            border-radius: 20px;
+            background-color:#3492DB;
+            padding: 5px;    
         }
     .slide-in-fwd-center {
 	-webkit-animation: slide-in-fwd-center 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s infinite alternate-reverse both;
@@ -136,11 +145,13 @@ footer{
     }
     textarea{
         width: 90%;
-        margin: 10px auto;
+        margin:0px auto 15px;
         border: 1px solid grey;
-        font-size:3vw;
+        font-size:2vw;
+        font-weight: 600;
+        font-variant-caps: all-petite-caps;
         text-align: center;
-        color:rgba(31, 30, 30, 0.977);
+        color:rgba(31, 30, 30, 0.977);   
     }
         
         </style>
@@ -198,16 +209,16 @@ footer{
     </main>    
     <section class="shadow-lg" id="words1">
         <div  class='words'>
-        <p  class='btn btn-lg btn-primary slide-in-fwd-center shadow-lg  --paragraph'>КОЛКОТО</p>
-        <p  class='btn btn-lg btn-primary slide-in-fwd-center  --paragraph'>МОЖЕ</p>
-        <p  class='btn btn-lg btn-primary slide-in-fwd-center --paragraph'>- ФРЕНСИС БЕЙКЪН</p>
-        <p  class='btn btn-lg btn-primary slide-in-fwd-center --paragraph'>ТОЛКОВА</p>
-        <p  class='btn btn-lg btn-primary slide-in-fwd-center --paragraph'>ЧОВЕК</p>
-        <p  class='btn btn-lg btn-primary slide-in-fwd-center --paragraph'>ЗНАЕ</p>
+        <p  class=' slide-in-fwd-center shadow-lg  --paragraph'>КОЛКОТО</p>
+        <p  class=' slide-in-fwd-center  --paragraph'>МОЖЕ</p>
+        <p  class=' slide-in-fwd-center --paragraph'>- ФРЕНСИС БЕЙКЪН</p>
+        <p  class=' slide-in-fwd-center --paragraph'>ТОЛКОВА</p>
+        <p  class=' slide-in-fwd-center --paragraph'>ЧОВЕК</p>
+        <p  class=' slide-in-fwd-center --paragraph'>ЗНАЕ</p>
         </div>
     </section>  
     <footer class="shadow">
-        <h4 style="padding: 20px;font-size: 2vw;">ПОДРЕДЕТЕ ДУМИТЕ ТАКА, ЧЕ ДА ОБРАЗУВАТ ИЗВЕСТНА СЕНТЕНЦИЯ И НЕЙНИЯ АВТОР. ЗАПИШЕТЕ ГИ В ПОЛЕТО.</h4>  
+        <h4 style="padding: 15px;font-size: 1.8vw;">ПОДРЕДЕТЕ ДУМИТЕ ТАКА, ЧЕ ДА ОБРАЗУВАТ ИЗВЕСТНА СЕНТЕНЦИЯ И НЕЙНИЯ АВТОР. ЗАПИШЕТЕ ГИ В ПОЛЕТО.</h4>  
         <textarea id="textID"  class="shadow-lg"  ></textarea>
         <img src="images/1.png" class="btn shadow-lg " onclick="check()" style="width:20%; border-radius:30px;" >
     </footer> 
