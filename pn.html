@@ -38,6 +38,22 @@
         font-size: 30px;
         text-align: center;
     }
+    .container-fluid{
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 53%; 
+    }
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
     </style>
 </head>
 <body>
@@ -46,8 +62,8 @@
         <img src="images/escaperoom1_1.jpg" style="width: 37%;" >
         <img src="images/pn1.png" style="width: 47%;"> 
     </header>
-        <main>
-        <iframe src="https://learningapps.org/watch?v=pxp9kptek23" style="border:0px;width:100%;height:600px;" allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false"></iframe>
+        <main class="container-fluid border rounded">
+        <iframe class="responsive-iframe" src="https://learningapps.org/watch?v=pxp9kptek23" style="border:0px;width:100%;height:600px;" allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false"></iframe>
         </main>
         <footer>
             <h5 style="text-align: center; margin-top: 30px; font-size: 1.8vw;"> ВЪВЕДЕТЕ КОДА ЗА ДА ОТКЛЮЧИТЕ СТЯТА</h5>
