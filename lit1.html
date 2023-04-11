@@ -203,9 +203,9 @@
 </main>
 <div style="width: 100%;height: 50px; background-color: #21B581; position:sticky; z-index: 1;"></div>
 
-<div class="container-fluid shadow-lg" id="portal" >
+<div class="container-fluid shadow-lg" id="portal"  >
     <iframe   class="responsive-iframe" src="https://learningapps.org/watch?v=p6vie0xrn23" allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false"></iframe>
-    <div class="container-overlay" id="overlay"><img src="images/portal3.gif" style="width: 100%; height: 100%;"onclick="ok2()"></div>
+    <div class="container-overlay" id="overlay" onclick="ok2()" style="pointer-events:none ;"><img src="images/portal3.gif"   style="width: 100%; height: 100%; " ></div>
 </div>
     <footer>
         <h5 style="text-align: center; margin-top: 15px; font-size: 1.8vw;">ЗА ДА ОТКЛЮЧИТЕ СТАЯТА ВЪВЕДЕТЕ КООРДИНАТИТЕ</h5>
@@ -251,10 +251,10 @@ function ok() {
         return valid;
     }
 
-    const show=document.getElementById('portal')      
+    const show=document.getElementById('overlay')      
     function ok1(){ 
         location.href='#portal';
-        /*show.id="portal2"*/
+        show.style="pointer-events:all;"
         
         
         }
