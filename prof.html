@@ -27,10 +27,10 @@
         justify-content: space-evenly;
            
     }
-    .dvg{
+    /*.dvg{
         width: 93%;
         margin: -15px auto 20px ;
-    }
+    }*/
     #it{
         width: 100%;
         height: 70px;
@@ -54,8 +54,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 40px;
-        padding-bottom: 40px;
+        padding-bottom: 30px;
         border: 1px solid grey;
     }
     input {
@@ -63,6 +62,31 @@
         border: 1px solid grey;
         font-size: 2vw;
         text-align: center;
+    }
+    .container-fluid{
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 47%; 
+      margin-top: -20px;
+    }
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .container-overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
     }
     
     </style>
@@ -88,9 +112,11 @@
             <input type="button" class="btn btn-secondary btn-lg" style="font-size: 1.5vw; margin-left: 5px;" value="Провери" onclick="check2()" > 
              </div>
     </div> 
-    <div class="dvg">
-        <iframe id= "la" src="images/energy12.jpg" style="border:0px;width:100%;height:507px" allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false" class="shadow-lg"></iframe>
+    <div class="container-fluid">
+        <iframe  class="responsive-iframe" id= "la" src="https://learningapps.org/watch?v=pkmeo8yi523" allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false" class="shadow-lg"></iframe>
+        <div class="container-overlay" id="overlay"><img src="images/energy12.jpg" style="width: 100%; height: 100%;"></div>
     </div>
+    
     </main>
     <footer>
         <h5 style="text-align: center; margin-top: 15px; font-size: 1.8vw;">ЗА ДА ОТКЛЮЧИТЕ СТЯТА, ВЪВЕДЕТЕ ДУМАТА ОТ ПОСЛЕДНОТО ПРЕДИЗВИКАТЕЛСТВО </h5>
@@ -110,11 +136,11 @@
             }
         }
         const code2=document.getElementById('code2')
-        const show2=document.getElementById('la')
+        const show2=document.getElementById('overlay')
         function check2(){
             if(code2.value==='9AI245'||code2.value==='9ai245'){
             alert('БРАВО! ВИЕ ОТКЛЮЧИХТЕ СЛЕДВАЩОТО ПРЕДИЗВИКАТЕЛСТВО!');
-            show2.src="https://learningapps.org/watch?v=pkmeo8yi523"
+            show2.style="visibility:hidden;"
             }else{
             alert('ГРЕШЕН КОД');
             }
