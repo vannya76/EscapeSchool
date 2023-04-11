@@ -21,19 +21,18 @@
     }
     .pptp{
         width:100%;
-        margin: 20px auto;
+        height:29.5vw;
+        position:relative;
+        margin: 30px auto;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
            
     }
-    /*.dvg{
-        width: 93%;
-        margin: -15px auto 20px ;
-    }*/
     #it{
         width: 100%;
-        height: 70px;
+        height: fit-content;
+        padding-bottom: 15px;
         background-color:white;
         position:sticky;
         z-index: 1;
@@ -97,19 +96,27 @@
         <img src="images/eng6bgheader.gif" style="width: 77%; ">
     </header>
     <main>
-        <section class="pptp">
-        
-            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSqOMRb5IT5Id-Adx2pn0-MeA20qi4I7Qpiz9cUdQl3Vitu9TVzMGAA-giCPIft0PgInUsMyWZWtBh9/embed?start=false&loop=true&delayms=60000" frameborder="0" width="45%" height="380" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="shadow-lg"></iframe>
-    
-            <iframe  id="El" src="images/padlocktr2.png" frameborder="0" width="45%" height="380px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="shadow-lg">  
-            </iframe>   
+        <section class="pptp row  row-cols-md-2">
+                <div class="row">              
+                  <div class="card shadow ">
+                    <iframe  class="responsive-iframe" src="https://docs.google.com/presentation/d/e/2PACX-1vSqOMRb5IT5Id-Adx2pn0-MeA20qi4I7Qpiz9cUdQl3Vitu9TVzMGAA-giCPIft0PgInUsMyWZWtBh9/embed?start=false&loop=true&delayms=60000" frameborder="0"   allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="shadow-lg"></iframe>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="card shadow ">
+                    <iframe class="responsive-iframe" id="El" src="https://docs.google.com/presentation/d/e/2PACX-1vTJEP062blT70L-EpMAhzi87Z_q5xeHzA-vCqch8BVe4_w81t-taqJ242AT1jQw0lpnl2zsjbIJ4Pl7/embed?start=false&loop=true&delayms=1000" frameborder="0"  allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="shadow-lg">  
+                    </iframe> 
+                    <div class="container-overlay" id="overlay1"><img src="images/padlocktr2.png" style="width: 100%; height: 100%;"></div>
+    </div>  
+                  </div>
+                </div>          
         </section>
     <div id="it" >
         <div id="checkcode"><input id="code1" type="text"  >
-       <input type="button" class="btn btn-secondary btn-lg" style="font-size: 1.5vw; margin-left: 5px;" value="Провери" onclick="check1()" > 
+       <input type="button" class="btn btn-secondary btn-lg" style="font-size: 1.5vw; margin-left: 1.7vw;" value="Провери" onclick="check1()" > 
         </div>
         <div id="checkcode"><input id="code2" type="text"  >
-            <input type="button" class="btn btn-secondary btn-lg" style="font-size: 1.5vw; margin-left: 5px;" value="Провери" onclick="check2()" > 
+            <input type="button" class="btn btn-secondary btn-lg" style="font-size: 1.5vw; margin-left: 20px;" value="Провери" onclick="check2()" > 
              </div>
     </div> 
     <div class="container-fluid">
@@ -125,12 +132,12 @@
     </footer>
     <script>
         const code1=document.getElementById('code1')
-        const show=document.getElementById('El')
+        const show=document.getElementById('overlay1')
         
         function check1(){
             if(code1.value==='10'){
             alert('БРАВО! ВИЕ ОТКЛЮЧИХТЕ СЛЕДВАЩОТО ПРЕДИЗВИКАТЕЛСТВО!');
-            show.src="https://docs.google.com/presentation/d/e/2PACX-1vTJEP062blT70L-EpMAhzi87Z_q5xeHzA-vCqch8BVe4_w81t-taqJ242AT1jQw0lpnl2zsjbIJ4Pl7/embed?start=false&loop=true&delayms=1000" 
+            show.style="visibility:hidden"; 
             }else{
             alert('ГРЕШЕН КОД');
             }
