@@ -63,11 +63,14 @@
     .words{
             display:flex;
             flex-direction: row;
-            flex-wrap: wrap;
-            justify-content:space-between;
-            align-items: center;
+            flex-wrap: nowrap;
+            justify-content:center;
             width: 100%;
+            margin-bottom:15px;
         }   
+        .--paragraph{
+            margin:0px 2vw;
+        }
      #portal2{
         visibility: hidden;
         width: 100%;
@@ -79,7 +82,12 @@
         background-size:cover;
         position: relative;
         cursor: pointer;
-     }    
+     }   
+     .inp{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     }
     </style>
 </head>
 <body>  
@@ -102,9 +110,11 @@
         <h4  class='shadow-lg --paragraph'>2</h4>
         <h4  class='shadow-lg --paragraph'>1</h4>
         <h4  class='shadow-lg --paragraph'>8</h4> 
-        <input type="text" class='shadow-lg ' id="firstcheck" style="font-size: 1.7vw; width:30%; padding: 7px; text-align: center; border:1px inset #21B581; border-radius: 3px; " placeholder="Въведи получените координати"> 
-        <h4  class='shadow-lg btn btn-outline-success' style="visibility:visible; color: #DDAE5B ;padding:10px 10px;  font-size: 1.5vw;; font-weight: 600; border-radius: 15px;" onclick="ok1()"> ПРОВЕРИ</h4>  
-        </div>    
+        </div> 
+        <div class="inp">
+        <input type="text" class='shadow-lg ' id="firstcheck" style="font-size: 1.7vw; width:40%; padding: 7px; text-align: center; border:1px inset #21B581; border-radius: 3px;" placeholder="Въведи получените координати"> 
+        <h4  class='shadow-lg btn btn-outline-success' style="visibility:visible; color: #DDAE5B ;padding:10px 10px;  font-size: 1.5vw; width:fit-content; margin:5px auto; font-weight: 600; border-radius: 15px;" onclick="ok1()"> ПРОВЕРИ</h4> 
+        </div>
     </section>
          
 </main>
