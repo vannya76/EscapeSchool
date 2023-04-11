@@ -28,15 +28,14 @@
     main{
        width: 95%;
        background-color: white;
-       margin: 30px auto;
+       margin: 20px auto;
        position:sticky;
     }
     footer{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: -5px;
-        padding-bottom: 40px;
+        padding-bottom: 30px;
         border: 3px solid grey;
         background-color: #21B581;
     }
@@ -50,8 +49,9 @@
         text-decoration: none;
         color: inherit;
     }
-    p{
+    p{ 
         font-size: 1.5vw;
+        padding: 0px 7px;
     }
     section{   
         margin: -15px auto;
@@ -69,18 +69,7 @@
             width: 100%;
            
         }   
-     #portal2{
-        visibility: hidden;
-        width: 100%;
-        background-color:white;
-        background-image: url('images/portal3.gif');  
-        background-position: center;
-        height: 600px;
-        background-repeat: no-repeat;
-        background-size:cover;
-        position: relative;
-        cursor: pointer;
-     }  
+   
      .meduza{
         background-color:transparent;
         border: 1px solid grey;
@@ -112,6 +101,30 @@
      .move{
         height: 7vw;
      }
+     .container-fluid{
+      position: relative;
+      overflow: hidden;
+      width: 100%;  
+      margin-top: -20px;
+    }
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .container-overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
     </style>
 </head>
 <body>  
@@ -119,11 +132,11 @@
         <img src="images/escape room animation1.gif" style="width: 40%;" >
         <img src="images/lit2bl.jpg" style="width: 40%;" > 
     </header>
-    <h2 style="text-align: center; margin: 10px auto; font-size:2vw;">Старогръцка митология - тайната на Медуза</h2>
+    <h2 style="text-align: center; margin: 0.5vw auto;  font-size:2vw;">Старогръцка митология - тайната на Медуза</h2>
     <main>
         <section class="shadow-lg">
          <p >Вашето пътуване във времето ви отведе в Античността, където ще се срещнете с олимпийски богове, герои, митични същества. Но внимавайте, грози ви опасността никога да не напуснете тази епоха. Времето ви изтича, а и в мрака ви дебне горгона Медуза, която пази портала към следващото ви изпитание. За да се справите, разчитайте на знанията си за старогръцката митология. И не за бравяйте, не гледайте Медуза в очите...</p>
-        
+         <h3 style="text-align: center; color: #DDAE5B; font-size: 1.7vw;margin-bottom: 10px;">Поставете изображенията на правилните места върху картинката.</h3>
          <div class="card text-bg-dark " style="width:85%; height:auto; margin: auto;">
             <img src="images/quiz22.jpg"   class="card-img" alt="...">
             <div class="card-img-overlay row row-cols-1 row-cols-md-1 " >
@@ -189,11 +202,12 @@
 </main>
 <div style="width: 100%;height: 50px; background-color: #21B581; position:sticky; z-index: 1;"></div>
 
-<section id="portal" class=" shadow-lg " style="visibility: hidden; height:20px; " onclick="ok2()">
-    <iframe id="bg" src="https://learningapps.org/watch?v=p6vie0xrn23" style="border:0px;width:100%;  margin:-20px auto 30px; visibility: hidden; " allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false" ></iframe>
-</section>
+<div class="container-fluid shadow-lg" id="portal" style="visibility: hidden; " onclick="ok2()">
+    <iframe   class="responsive-iframe" src="https://learningapps.org/watch?v=p6vie0xrn23" allowfullscreen="false" webkitallowfullscreen="false" mozallowfullscreen="false"></iframe>
+    <div class="container-overlay" id="overlay"><img src="images/portal3.gif" style="width: 100%; height: 100%;"></div>
+</div>
     <footer>
-        <h5 style="text-align: center; margin-top: 30px; font-size: 1.8vw;">ЗА ДА ОТКЛЮЧИТЕ СТАЯТА ВЪВЕДЕТЕ КООРДИНАТИТЕ</h5>
+        <h5 style="text-align: center; margin-top: 15px; font-size: 1.8vw;">ЗА ДА ОТКЛЮЧИТЕ СТАЯТА ВЪВЕДЕТЕ КООРДИНАТИТЕ</h5>
         <input id="textID" type="text"  >
         <input type="button" class="btn btn-secondary btn-lg" style="font-size: 1.8vw;" value="Escape the room" onclick="check()">
     </footer>
@@ -239,16 +253,14 @@ function ok() {
     const show=document.getElementById('portal')      
     function ok1(){ 
         location.href='#portal';
-        show.id="portal2"
-        show.style="visibility:visible; height:550px;";
+        /*show.id="portal2"*/
+        show.style="visibility:visible; padding-top: 53%;  margin:-20px auto 30px; ";
         
         }
-        
-    const showbg=document.getElementById('bg')
+    const hide=document.getElementById('overlay')
     function ok2(){   
-        show.id="portal"
-        showbg.style="visibility:visible; width:100%; height:550px; margin:-20px auto 30px;"   
-    }
+        hide.style="visibility:hidden;"
+        }
     
       
     const code=document.getElementById('textID')
