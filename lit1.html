@@ -170,7 +170,10 @@
     </section>                         
     <section class="shadow-lg" id="pics1">
         <div  class='pics'>
-           
+            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="move" src="images/prometheus.jpg"  id="prometheus" draggable="true" ondragstart="drag(event)">
+            </div>
+              
             <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img class="move" src="images/Hades1.jpg"  id="hades"
                      draggable="true" ondragstart="drag(event)">
@@ -183,7 +186,14 @@
                 <img class="move" src="images/gm.gif"  id="medusa"
                      draggable="true" ondragstart="drag(event)">
             </div>
-            
+            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="move" src="images/Achilles_Hector.png"  id="achilles"
+                     draggable="true" ondragstart="drag(event)">
+            </div> 
+            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="move" src="images/zeus.png"  id="zeus"
+                     draggable="true" ondragstart="drag(event)">
+            </div>
             <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img class="move" src="images/poseidon.jpg"  id="poseidon"
                      draggable="true" ondragstart="drag(event)">
@@ -192,20 +202,12 @@
                 <img  class="move" src="images/AHA1.png"  id="apple"
                      draggable="true" ondragstart="drag(event)">
             </div>
-            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img class="move" src="images/zeus.png"  id="zeus"
-                     draggable="true" ondragstart="drag(event)">
-            </div>
-            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img class="move" src="images/Achilles_Hector.png"  id="achilles"
-                     draggable="true" ondragstart="drag(event)">
-            </div>     
+            
+              
             <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img class="move" src="images/tezeus1.jpg"  id="tezeus" draggable="true" ondragstart="drag(event)">
             </div>
-            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img class="move" src="images/prometheus.jpg"  id="prometheus" draggable="true" ondragstart="drag(event)">
-            </div>
+           
         </div> 
         
         <div ><h3  class='shadow-lg btn btn-outline-success' style=" color: #DDAE5B ;padding:10px 10px;  font-size:1.7vw; font-weight: 600; border-radius: 15px; margin: 15px 45%;" onclick="ok()"> ПРОВЕРИ</h3>   </div>
