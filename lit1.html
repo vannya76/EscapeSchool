@@ -65,15 +65,14 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content:space-evenly;
-            align-items: center;
+            align-items:center;
             width: 100%;
-           
         }   
    
      .meduza{
         background-color:transparent;
         border: 1px solid grey;
-        /*margin: 15px 0px;*/
+        margin: auto;
         width: 11.5vw;
         height:7vw;
         box-sizing:content-box;
@@ -82,12 +81,19 @@
      .draggable{
         background-color:transparent;
         border: 1px solid grey;
-        margin: 7px 10px;
+        margin: auto;
         box-sizing: content-box;
         width:11.5vw;
         height: 7vw;
-       
+        transition: transform .3s;
+ 
      }
+     .draggable:hover {
+        -ms-transform: scale(1.5); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.5); 
+}
+
      .--inp{
         display: flex;
         flex-direction: row;
@@ -164,38 +170,40 @@
     </section>                         
     <section class="shadow-lg" id="pics1">
         <div  class='pics'>
-            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img class="move" src="images/fallTroy.jpg"  id="troy"
-                     draggable="true" ondragstart="drag(event)">
-            </div>
-            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img class="move" src="images/poseidon.jpg"  id="poseidon"
-                     draggable="true" ondragstart="drag(event)">
-            </div>
-            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img class="move" src="images/gm.gif"  id="medusa"
-                     draggable="true" ondragstart="drag(event)">
-            </div>
-            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
+           
+            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img class="move" src="images/Hades1.jpg"  id="hades"
                      draggable="true" ondragstart="drag(event)">
             </div>
-            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="move" src="images/fallTroy.jpg"  id="troy"
+                     draggable="true" ondragstart="drag(event)">
+            </div>
+            <div class="draggable  m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="move" src="images/gm.gif"  id="medusa"
+                     draggable="true" ondragstart="drag(event)">
+            </div>
+            
+            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="move" src="images/poseidon.jpg"  id="poseidon"
+                     draggable="true" ondragstart="drag(event)">
+            </div>
+            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img  class="move" src="images/AHA1.png"  id="apple"
                      draggable="true" ondragstart="drag(event)">
             </div>
-            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img class="move" src="images/zeus.png"  id="zeus"
                      draggable="true" ondragstart="drag(event)">
             </div>
-            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img class="move" src="images/Achilles_Hector.png"  id="achilles"
                      draggable="true" ondragstart="drag(event)">
             </div>     
-            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img class="move" src="images/tezeus1.jpg"  id="tezeus" draggable="true" ondragstart="drag(event)">
             </div>
-            <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="draggable m-3 p-0 shadow-lg" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img class="move" src="images/prometheus.jpg"  id="prometheus" draggable="true" ondragstart="drag(event)">
             </div>
         </div> 
